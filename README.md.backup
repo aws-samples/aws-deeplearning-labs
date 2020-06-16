@@ -1,4 +1,4 @@
-## eks-kubeflow-cloudformation-quick-start
+# eks-kubeflow-cloudformation-quick-start -
 
 # Why?
 
@@ -112,11 +112,3 @@ You can open KubeFlow dashboard by selecting Preview --> Preview running applica
 3) Delete IAM Roles.
 4) Delete/Disable the AWS KMS Custom Key (optional)
 5) Delete the Cloudformation templates . There will be total three templates ( 2 from eksctl and 1 which you created at the beginning of the lab).
-
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-## License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
