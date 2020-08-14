@@ -6,7 +6,7 @@ spec:
   roleArn: arn:aws:iam::Account-Number:role/sm-role-test-1
   region: us-east-2
   algorithmSpecification:
-    trainingImage: 825641698319.dkr.ecr.us-east-2.amazonaws.com/xgboost:latest
+    trainingImage: 257758044811.dkr.ecr.us-east-2.amazonaws.com/sagemaker-xgboost:1.0-1-cpu-py3
     trainingInputMode: File
   outputDataConfig:
     s3OutputPath: s3://bucket/xgboost-mnist/models/
