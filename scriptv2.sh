@@ -42,7 +42,7 @@ cd ${KF_DIR} && wget -O kfctl_aws.yaml $CONFIG_URI
 
 #sed -i '/region: us-west-2/ a \      enablePodIamPolicy: true' ${CONFIG_FILE}
 
-sed -i -e 's/kubeflow-demo/'"$AWS_CLUSTER_NAME"'/' ${CONFIG_FILE}
+#sed -i -e 's/kubeflow-demo/'"$AWS_CLUSTER_NAME"'/' ${CONFIG_FILE}
 sed -i "s@us-west-2@$AWS_REGION@" ${CONFIG_FILE}
 
 #sed -i "s@roles:@#roles:@" ${CONFIG_FILE}
