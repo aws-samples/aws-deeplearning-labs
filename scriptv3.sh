@@ -11,7 +11,7 @@ source ~/.bashrc
 
 export AWS_ACCOUNT=$(aws sts get-caller-identity --output text --query Account)
 eksctl utils associate-iam-oidc-provider --cluster ${AWS_CLUSTER_NAME} --region ${AWS_REGION} --approve
-export EKS_OIDC=$(aws eks describe-cluster --query cluster --name ${AWS_CLUSTER_NAME} --output text | grep -i OIDC | grep -oP '(?<=https://oidc.eks.us-east-2.amazonaws.com/id/).*' )
+export EKS_OIDC=$(aws eks describe-cluster --query cluster --name ${AWS_CLUSTER_NAME} --output text | grep -i OIDC | grep -oP "(?<=https://oidc.eks.${AWS_REGION}.amazonaws.com/id/).*" )
 
 cat << EoF > trust.json
 {
