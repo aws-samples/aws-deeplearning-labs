@@ -16,9 +16,6 @@ export NODEGROUP_NAME=$(eksctl get nodegroups --cluster ${AWS_CLUSTER_NAME} -o j
 eksctl scale nodegroup --cluster ${AWS_CLUSTER_NAME} --name $NODEGROUP_NAME --nodes 6 --nodes-max 10
 
 curl --silent --location "https://github.com/kubeflow/kfctl/releases/download/v1.2.0/kfctl_v1.2.0-0-gbc038f9_linux.tar.gz" | tar xz -C /tmp
-#curl --silent --location "https://kubeflow-aws.s3-us-west-2.amazonaws.com/kfctl/linux/kfctl_v1.0.2-1-g93e95e1_linux.tar.gz" | tar xz -C /tmp
-#https://github.com/kubeflow/kfctl/releases/download/v1.2.0/kfctl_v1.2.0-0-gbc038f9_linux.tar.gz
-
 
 sudo cp -v /tmp/kfctl /usr/local/bin
 
@@ -45,8 +42,8 @@ cd ${KF_DIR} && wget -O kfctl_aws.yaml $CONFIG_URI
 #sed -i -e 's/kubeflow-demo/'"$AWS_CLUSTER_NAME"'/' ${CONFIG_FILE}
 sed -i "s@us-west-2@$AWS_REGION@" ${CONFIG_FILE}
 
-#sed -i "s@roles:@#roles:@" ${CONFIG_FILE}
-#sed -i "s@- eksctl-${AWS_CLUSTER_NAME}-nodegroup-ng-a2-NodeInstanceRole-xxxxxxx@#- eksctl-${AWS_CLUSTER_NAME}-nodegroup-ng-a2-NodeInstanceRole-xxxxxxx@" ${CONFIG_FILE}
+sed -i "s@roles:@#roles:@" ${CONFIG_FILE}
+sed -i "s@- eksctl-${AWS_CLUSTER_NAME}-nodegroup-ng-a2-NodeInstanceRole-xxxxxxx@#- eksctl-${AWS_CLUSTER_NAME}-nodegroup-ng-a2-NodeInstanceRole-xxxxxxx@" ${CONFIG_FILE}
 
 curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
 chmod +x aws-iam-authenticator
@@ -57,7 +54,7 @@ cd ${KF_DIR} && kfctl apply -V -f ${CONFIG_FILE}
 kubectl -n kubeflow get all
 
 
-#export NODE_IAM_ROLE_NAME=$(eksctl get iamidentitymapping --cluster ${AWS_CLUSTER_NAME} | grep  arn | awk  '{print $1}' | egrep -o eks.*)
-#aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonSageMakerFullAccess
-#aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
-#aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
+export NODE_IAM_ROLE_NAME=$(eksctl get iamidentitymapping --cluster ${AWS_CLUSTER_NAME} | grep  arn | awk  '{print $1}' | egrep -o eks.*)
+aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonSageMakerFullAccess
+aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
+aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
