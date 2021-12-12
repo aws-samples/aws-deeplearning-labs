@@ -1,0 +1,769 @@
+eks cluster name is eksworkshop-MaM40vbNuCjdI
+aws region is us-west-2
+NAME                                           STATUS   ROLES    AGE   VERSION
+ip-192-168-11-246.us-west-2.compute.internal   Ready    <none>   12m   v1.21.5-eks-bc4871b
+ip-192-168-24-91.us-west-2.compute.internal    Ready    <none>   16m   v1.21.5-eks-bc4871b
+ip-192-168-38-121.us-west-2.compute.internal   Ready    <none>   16m   v1.21.5-eks-bc4871b
+ip-192-168-60-46.us-west-2.compute.internal    Ready    <none>   12m   v1.21.5-eks-bc4871b
+ip-192-168-77-254.us-west-2.compute.internal   Ready    <none>   12m   v1.21.5-eks-bc4871b
+ip-192-168-89-247.us-west-2.compute.internal   Ready    <none>   16m   v1.21.5-eks-bc4871b
+export ROLE_NAME=eksctl-eksworkshop-MaM40vbNuCjdI-NodeInstanceRole-1058ITJHHN2GR
+2021-12-12 05:29:26 [ℹ]  scaling nodegroup "nodegroup" in cluster eksworkshop-MaM40vbNuCjdI
+2021-12-12 05:29:27 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 05:29:43 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 05:30:00 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 05:30:20 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 05:30:37 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 05:30:37 [ℹ]  nodegroup successfully scaled
+‘/tmp/kfctl’ -> ‘/usr/local/bin/kfctl’
+2021-12-12 05:30:40 [ℹ]  eksctl version 0.76.0
+2021-12-12 05:30:40 [ℹ]  using region us-west-2
+2021-12-12 05:30:40 [✔]  saved kubeconfig as "/home/ec2-user/.kube/config"
+namespace/cert-manager configured
+namespace/kubeflow unchanged
+serviceaccount/application-controller-service-account unchanged
+customresourcedefinition.apiextensions.k8s.io/applications.app.k8s.io unchanged
+clusterrole.rbac.authorization.k8s.io/application-controller-cluster-role unchanged
+clusterrolebinding.rbac.authorization.k8s.io/application-controller-cluster-role-binding unchanged
+service/application-controller-service unchanged
+statefulset.apps/application-controller-stateful-set configured
+application.app.k8s.io/application-controller-kubeflow unchanged
+namespace/istio-system configured
+configmap/istio unchanged
+configmap/istio-galley-configuration unchanged
+configmap/istio-security-custom-resources unchanged
+configmap/istio-sidecar-injector unchanged
+configmap/istio-install-parameters-5kmkd2f29g unchanged
+configmap/prometheus unchanged
+serviceaccount/istio-pilot-service-account unchanged
+serviceaccount/istio-security-post-install-account unchanged
+serviceaccount/istio-nodeagent-service-account unchanged
+serviceaccount/istio-multi configured
+serviceaccount/istio-mixer-service-account unchanged
+serviceaccount/istio-ingressgateway-service-account unchanged
+serviceaccount/prometheus unchanged
+serviceaccount/istio-citadel-service-account unchanged
+serviceaccount/istio-galley-service-account unchanged
+serviceaccount/istio-sidecar-injector-service-account unchanged
+customresourcedefinition.apiextensions.k8s.io/authorizationpolicies.rbac.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/policies.authentication.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/quotaspecbindings.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/quotaspecs.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/rbacconfigs.rbac.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/rules.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/serviceentries.networking.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/meshpolicies.authentication.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/serviceroles.rbac.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/sidecars.networking.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/templates.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/virtualservices.networking.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/issuers.certmanager.k8s.io unchanged
+customresourcedefinition.apiextensions.k8s.io/clusterrbacconfigs.rbac.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/httpapispecs.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/httpapispecbindings.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/handlers.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/gateways.networking.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/envoyfilters.networking.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/destinationrules.networking.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/clusterissuers.certmanager.k8s.io unchanged
+customresourcedefinition.apiextensions.k8s.io/servicerolebindings.rbac.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/challenges.certmanager.k8s.io unchanged
+customresourcedefinition.apiextensions.k8s.io/certificates.certmanager.k8s.io unchanged
+customresourcedefinition.apiextensions.k8s.io/adapters.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/instances.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/attributemanifests.config.istio.io unchanged
+customresourcedefinition.apiextensions.k8s.io/orders.certmanager.k8s.io unchanged
+clusterrole.rbac.authorization.k8s.io/istio-mixer-istio-system unchanged
+clusterrole.rbac.authorization.k8s.io/istio-reader configured
+clusterrole.rbac.authorization.k8s.io/istio-citadel-istio-system unchanged
+clusterrole.rbac.authorization.k8s.io/prometheus-istio-system unchanged
+clusterrole.rbac.authorization.k8s.io/istio-security-post-install-istio-system unchanged
+clusterrole.rbac.authorization.k8s.io/istio-nodeagent-istio-system unchanged
+clusterrole.rbac.authorization.k8s.io/istio-galley-istio-system unchanged
+clusterrole.rbac.authorization.k8s.io/istio-sidecar-injector-istio-system unchanged
+clusterrole.rbac.authorization.k8s.io/istio-pilot-istio-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/istio-mixer-admin-role-binding-istio-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/istio-nodeagent-istio-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/istio-galley-admin-role-binding-istio-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/istio-sidecar-injector-admin-role-binding-istio-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/istio-citadel-istio-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/istio-security-post-install-role-binding-istio-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/istio-multi configured
+clusterrolebinding.rbac.authorization.k8s.io/istio-pilot-istio-system unchanged
+clusterrolebinding.rbac.authorization.k8s.io/prometheus-istio-system unchanged
+role.rbac.authorization.k8s.io/istio-ingressgateway-sds unchanged
+rolebinding.rbac.authorization.k8s.io/istio-ingressgateway-sds unchanged
+service/istio-pilot unchanged
+service/istio-citadel unchanged
+service/istio-galley unchanged
+service/istio-ingressgateway unchanged
+service/istio-policy unchanged
+service/istio-sidecar-injector unchanged
+service/istio-telemetry unchanged
+service/prometheus unchanged
+daemonset.apps/istio-nodeagent configured
+deployment.apps/prometheus unchanged
+deployment.apps/istio-galley configured
+deployment.apps/istio-ingressgateway configured
+deployment.apps/istio-pilot configured
+deployment.apps/istio-policy configured
+deployment.apps/istio-citadel configured
+deployment.apps/istio-telemetry configured
+deployment.apps/istio-sidecar-injector configured
+job.batch/istio-security-post-install-release-1.3-latest-daily unchanged
+mutatingwebhookconfiguration.admissionregistration.k8s.io/istio-sidecar-injector configured
+destinationrule.networking.istio.io/istio-telemetry unchanged
+destinationrule.networking.istio.io/istio-policy unchanged
+horizontalpodautoscaler.autoscaling/istio-telemetry unchanged
+horizontalpodautoscaler.autoscaling/istio-ingressgateway unchanged
+horizontalpodautoscaler.autoscaling/istio-pilot unchanged
+horizontalpodautoscaler.autoscaling/istio-policy unchanged
+poddisruptionbudget.policy/istio-telemetry configured
+poddisruptionbudget.policy/istio-policy configured
+poddisruptionbudget.policy/istio-sidecar-injector configured
+poddisruptionbudget.policy/istio-ingressgateway configured
+poddisruptionbudget.policy/istio-galley configured
+poddisruptionbudget.policy/istio-pilot configured
+servicerole.rbac.istio.io/istio-ingressgateway unchanged
+servicerolebinding.rbac.istio.io/istio-ingressgateway unchanged
+attributemanifest.config.istio.io/kubernetes unchanged
+attributemanifest.config.istio.io/istioproxy unchanged
+handler.config.istio.io/kubernetesenv unchanged
+handler.config.istio.io/prometheus unchanged
+instance.config.istio.io/requestcount unchanged
+instance.config.istio.io/requestsize unchanged
+instance.config.istio.io/tcpbytereceived unchanged
+instance.config.istio.io/tcpconnectionsclosed unchanged
+instance.config.istio.io/requestduration unchanged
+instance.config.istio.io/responsesize unchanged
+instance.config.istio.io/attributes unchanged
+instance.config.istio.io/tcpconnectionsopened unchanged
+instance.config.istio.io/tcpbytesent unchanged
+rule.config.istio.io/promtcpconnectionopen unchanged
+rule.config.istio.io/tcpkubeattrgenrulerule unchanged
+rule.config.istio.io/promhttp unchanged
+rule.config.istio.io/kubeattrgenrulerule unchanged
+rule.config.istio.io/promtcpconnectionclosed unchanged
+rule.config.istio.io/promtcp unchanged
+namespace/istio-system configured
+configmap/cluster-local-gateway-parameters-tbbdb2842d unchanged
+serviceaccount/cluster-local-gateway-service-account unchanged
+serviceaccount/istio-multi configured
+clusterrole.rbac.authorization.k8s.io/istio-reader configured
+clusterrolebinding.rbac.authorization.k8s.io/istio-multi configured
+service/cluster-local-gateway unchanged
+deployment.apps/cluster-local-gateway configured
+horizontalpodautoscaler.autoscaling/cluster-local-gateway unchanged
+poddisruptionbudget.policy/cluster-local-gateway configured
+configmap/istio-parameters-cm9hckfgmb unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-istio-admin configured
+clusterrole.rbac.authorization.k8s.io/kubeflow-istio-edit unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-istio-view unchanged
+clusterrbacconfig.rbac.istio.io/default unchanged
+gateway.networking.istio.io/kubeflow-gateway unchanged
+serviceentry.networking.istio.io/google-api-entry unchanged
+serviceentry.networking.istio.io/google-storage-api-entry unchanged
+virtualservice.networking.istio.io/google-api-vs unchanged
+virtualservice.networking.istio.io/google-storage-api-vs unchanged
+virtualservice.networking.istio.io/grafana-vs unchanged
+customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io unchanged
+customresourcedefinition.apiextensions.k8s.io/certificates.cert-manager.io unchanged
+customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io unchanged
+customresourcedefinition.apiextensions.k8s.io/clusterissuers.cert-manager.io unchanged
+customresourcedefinition.apiextensions.k8s.io/issuers.cert-manager.io unchanged
+customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io unchanged
+configmap/cert-manager-kube-params-parameters unchanged
+role.rbac.authorization.k8s.io/cert-manager-cainjector:leaderelection unchanged
+role.rbac.authorization.k8s.io/cert-manager:leaderelection unchanged
+rolebinding.rbac.authorization.k8s.io/cert-manager-cainjector:leaderelection configured
+rolebinding.rbac.authorization.k8s.io/cert-manager-webhook:webhook-authentication-reader configured
+rolebinding.rbac.authorization.k8s.io/cert-manager:leaderelection configured
+namespace/cert-manager configured
+configmap/cert-manager-parameters unchanged
+serviceaccount/cert-manager unchanged
+serviceaccount/cert-manager-cainjector unchanged
+serviceaccount/cert-manager-webhook unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-webhook:webhook-requester unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-view unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-edit unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-webhook:auth-delegator configured
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+service/cert-manager unchanged
+service/cert-manager-webhook unchanged
+deployment.apps/cert-manager unchanged
+deployment.apps/cert-manager-cainjector configured
+deployment.apps/cert-manager-webhook configured
+mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+apiservice.apiregistration.k8s.io/v1beta1.webhook.cert-manager.io unchanged
+application.app.k8s.io/cert-manager configured
+clusterissuer.cert-manager.io/kubeflow-self-signing-issuer unchanged
+serviceaccount/meta-controller-service unchanged
+customresourcedefinition.apiextensions.k8s.io/compositecontrollers.metacontroller.k8s.io unchanged
+customresourcedefinition.apiextensions.k8s.io/controllerrevisions.metacontroller.k8s.io unchanged
+customresourcedefinition.apiextensions.k8s.io/decoratorcontrollers.metacontroller.k8s.io unchanged
+clusterrolebinding.rbac.authorization.k8s.io/meta-controller-cluster-role-binding unchanged
+statefulset.apps/metacontroller configured
+configmap/oidc-authservice-parameters unchanged
+persistentvolumeclaim/authservice-pvc unchanged
+service/authservice unchanged
+statefulset.apps/authservice configured
+application.app.k8s.io/oidc-authservice unchanged
+envoyfilter.networking.istio.io/authn-filter unchanged
+namespace/auth unchanged
+configmap/dex-parameters configured
+configmap/dex unchanged
+configmap/dex-config unchanged
+serviceaccount/dex unchanged
+customresourcedefinition.apiextensions.k8s.io/authcodes.dex.coreos.com unchanged
+clusterrole.rbac.authorization.k8s.io/dex unchanged
+clusterrolebinding.rbac.authorization.k8s.io/dex unchanged
+service/dex unchanged
+deployment.apps/dex unchanged
+virtualservice.networking.istio.io/dex unchanged
+configmap/admission-webhook-bootstrap-config-map unchanged
+serviceaccount/admission-webhook-bootstrap-service-account unchanged
+clusterrole.rbac.authorization.k8s.io/admission-webhook-bootstrap-cluster-role unchanged
+clusterrolebinding.rbac.authorization.k8s.io/admission-webhook-bootstrap-cluster-role-binding unchanged
+statefulset.apps/admission-webhook-bootstrap-stateful-set configured
+application.app.k8s.io/bootstrap configured
+serviceaccount/spark-operatoroperator-sa unchanged
+serviceaccount/spark-operatorspark unchanged
+customresourcedefinition.apiextensions.k8s.io/scheduledsparkapplications.sparkoperator.k8s.io unchanged
+customresourcedefinition.apiextensions.k8s.io/sparkapplications.sparkoperator.k8s.io unchanged
+clusterrole.rbac.authorization.k8s.io/spark-operatoroperator-cr unchanged
+clusterrolebinding.rbac.authorization.k8s.io/spark-operatorsparkoperator-crb unchanged
+role.rbac.authorization.k8s.io/spark-operatorspark-role unchanged
+rolebinding.rbac.authorization.k8s.io/spark-operatorspark-role-binding unchanged
+deployment.apps/spark-operatorsparkoperator unchanged
+application.app.k8s.io/spark-operator unchanged
+secret/mysql-secret-fd5gktm75t unchanged
+secret/mlpipeline-minio-artifact unchanged
+secret/metadata-db-secrets unchanged
+secret/katib-mysql-secrets unchanged
+secret/katib-controller configured
+configmap/admission-webhook-admission-webhook-parameters unchanged
+configmap/kubeflow-config unchanged
+configmap/kubeflow-pipelines-profile-controller-code-gd97t2m5f5 unchanged
+configmap/kubeflow-pipelines-profile-controller-env-mgh6th2gff unchanged
+configmap/metadata-db-parameters unchanged
+configmap/metadata-grpc-configmap unchanged
+configmap/metadata-ui-parameters unchanged
+configmap/ml-pipeline-ui-configmap unchanged
+configmap/mpi-operator-config unchanged
+configmap/pipeline-install-config-2829cc67f8 unchanged
+configmap/pipeline-api-server-config-f4t72426kt unchanged
+configmap/pipeline-upstream-install-config-d7hkh24mdg unchanged
+configmap/profiles-profiles-config-4mgcmtgk6t unchanged
+configmap/seldon-config unchanged
+configmap/trial-template unchanged
+configmap/katib-config unchanged
+configmap/workflow-controller-parameters unchanged
+configmap/jupyter-web-app-jupyter-web-app-config-24bth2gbkc unchanged
+configmap/default-install-config-h877hbtmf7 unchanged
+configmap/centraldashboard-links-config unchanged
+configmap/aws-alb-ingress-controller-config unchanged
+configmap/notebook-controller-notebook-controller-config-h4d668t5tb unchanged
+configmap/workflow-controller-configmap unchanged
+persistentvolumeclaim/metadata-mysql unchanged
+persistentvolumeclaim/mysql-pv-claim unchanged
+persistentvolumeclaim/minio-pvc unchanged
+persistentvolumeclaim/katib-mysql unchanged
+serviceaccount/kubeflow-pipelines-viewer unchanged
+serviceaccount/ml-pipeline-viewer-crd-service-account unchanged
+serviceaccount/ml-pipeline-visualizationserver unchanged
+serviceaccount/mpi-operator unchanged
+serviceaccount/mxnet-operator unchanged
+serviceaccount/notebook-controller-service-account unchanged
+serviceaccount/pipeline-runner unchanged
+serviceaccount/profiles-controller-service-account unchanged
+serviceaccount/pytorch-operator unchanged
+serviceaccount/seldon-manager unchanged
+serviceaccount/tf-job-dashboard unchanged
+serviceaccount/tf-job-operator unchanged
+serviceaccount/ml-pipeline-ui unchanged
+serviceaccount/ml-pipeline-scheduledworkflow unchanged
+serviceaccount/kubeflow-pipelines-cache-deployer-sa unchanged
+serviceaccount/kubeflow-pipelines-cache unchanged
+serviceaccount/katib-ui unchanged
+serviceaccount/katib-controller unchanged
+serviceaccount/jupyter-web-app-service-account unchanged
+serviceaccount/centraldashboard unchanged
+serviceaccount/argo-ui unchanged
+serviceaccount/argo unchanged
+serviceaccount/alb-ingress-controller unchanged
+serviceaccount/admission-webhook-service-account unchanged
+serviceaccount/kubeflow-pipelines-container-builder unchanged
+serviceaccount/kubeflow-pipelines-metadata-writer unchanged
+serviceaccount/ml-pipeline unchanged
+serviceaccount/ml-pipeline-persistenceagent unchanged
+customresourcedefinition.apiextensions.k8s.io/experiments.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/mpijobs.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/mxjobs.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/notebooks.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/poddefaults.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/profiles.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/pytorchjobs.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/scheduledworkflows.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/seldondeployments.machinelearning.seldon.io unchanged
+customresourcedefinition.apiextensions.k8s.io/suggestions.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/tfjobs.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/trials.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/viewers.kubeflow.org unchanged
+customresourcedefinition.apiextensions.k8s.io/workflows.argoproj.io unchanged
+clusterrole.rbac.authorization.k8s.io/alb-ingress-controller unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-kubernetes-view unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-mpijobs-admin configured
+clusterrole.rbac.authorization.k8s.io/kubeflow-mpijobs-edit unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-mpijobs-view unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-mxjobs-admin configured
+clusterrole.rbac.authorization.k8s.io/kubeflow-mxjobs-edit unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-mxjobs-view unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-pipelines-cache-deployer-clusterrole unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-pipelines-cache-role unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-pipelines-metadata-writer-role unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-pytorchjobs-admin configured
+clusterrole.rbac.authorization.k8s.io/kubeflow-pytorchjobs-edit unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-pytorchjobs-view unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-tfjobs-admin configured
+clusterrole.rbac.authorization.k8s.io/kubeflow-tfjobs-edit unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-tfjobs-view unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-view configured
+clusterrole.rbac.authorization.k8s.io/ml-pipeline-persistenceagent-role unchanged
+clusterrole.rbac.authorization.k8s.io/ml-pipeline-scheduledworkflow-role unchanged
+clusterrole.rbac.authorization.k8s.io/ml-pipeline-ui unchanged
+clusterrole.rbac.authorization.k8s.io/ml-pipeline-viewer-controller-role unchanged
+clusterrole.rbac.authorization.k8s.io/mpi-operator unchanged
+clusterrole.rbac.authorization.k8s.io/notebook-controller-kubeflow-notebooks-admin configured
+clusterrole.rbac.authorization.k8s.io/notebook-controller-kubeflow-notebooks-edit unchanged
+clusterrole.rbac.authorization.k8s.io/notebook-controller-kubeflow-notebooks-view unchanged
+clusterrole.rbac.authorization.k8s.io/notebook-controller-role unchanged
+clusterrole.rbac.authorization.k8s.io/seldon-manager-role-kubeflow configured
+clusterrole.rbac.authorization.k8s.io/seldon-manager-sas-role-kubeflow configured
+clusterrole.rbac.authorization.k8s.io/argo unchanged
+clusterrole.rbac.authorization.k8s.io/admission-webhook-kubeflow-poddefaults-edit configured
+clusterrole.rbac.authorization.k8s.io/ml-pipeline unchanged
+clusterrole.rbac.authorization.k8s.io/mxnet-operator unchanged
+clusterrole.rbac.authorization.k8s.io/pytorch-operator unchanged
+clusterrole.rbac.authorization.k8s.io/tf-job-operator unchanged
+clusterrole.rbac.authorization.k8s.io/admission-webhook-kubeflow-poddefaults-admin configured
+clusterrole.rbac.authorization.k8s.io/admission-webhook-cluster-role unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-kubernetes-edit unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-kubernetes-admin unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-katib-view unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-katib-edit unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-katib-admin configured
+clusterrole.rbac.authorization.k8s.io/kubeflow-edit configured
+clusterrole.rbac.authorization.k8s.io/kubeflow-admin configured
+clusterrole.rbac.authorization.k8s.io/katib-ui unchanged
+clusterrole.rbac.authorization.k8s.io/katib-controller unchanged
+clusterrole.rbac.authorization.k8s.io/jupyter-web-app-kubeflow-notebook-ui-view unchanged
+clusterrole.rbac.authorization.k8s.io/jupyter-web-app-kubeflow-notebook-ui-edit unchanged
+clusterrole.rbac.authorization.k8s.io/admission-webhook-kubeflow-poddefaults-view unchanged
+clusterrole.rbac.authorization.k8s.io/jupyter-web-app-cluster-role unchanged
+clusterrole.rbac.authorization.k8s.io/centraldashboard unchanged
+clusterrole.rbac.authorization.k8s.io/jupyter-web-app-kubeflow-notebook-ui-admin configured
+clusterrole.rbac.authorization.k8s.io/argo-ui unchanged
+clusterrolebinding.rbac.authorization.k8s.io/seldon-manager-sas-rolebinding-kubeflow unchanged
+clusterrolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-cache-deployer-clusterrolebinding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-metadata-writer-binding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline-persistenceagent-binding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline-scheduledworkflow-binding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline-ui unchanged
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline-viewer-crd-binding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/mpi-operator unchanged
+clusterrolebinding.rbac.authorization.k8s.io/notebook-controller-role-binding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/profiles-cluster-role-binding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/seldon-manager-rolebinding-kubeflow unchanged
+clusterrolebinding.rbac.authorization.k8s.io/katib-ui unchanged
+clusterrolebinding.rbac.authorization.k8s.io/argo unchanged
+clusterrolebinding.rbac.authorization.k8s.io/argo-ui unchanged
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline unchanged
+clusterrolebinding.rbac.authorization.k8s.io/mxnet-operator unchanged
+clusterrolebinding.rbac.authorization.k8s.io/pytorch-operator unchanged
+clusterrolebinding.rbac.authorization.k8s.io/tf-job-operator unchanged
+clusterrolebinding.rbac.authorization.k8s.io/katib-controller unchanged
+clusterrolebinding.rbac.authorization.k8s.io/jupyter-web-app-cluster-role-binding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/centraldashboard unchanged
+clusterrolebinding.rbac.authorization.k8s.io/alb-ingress-controller unchanged
+clusterrolebinding.rbac.authorization.k8s.io/admission-webhook-cluster-role-binding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-cache-binding unchanged
+role.rbac.authorization.k8s.io/kubeflow-pipelines-cache-deployer-role unchanged
+role.rbac.authorization.k8s.io/centraldashboard unchanged
+role.rbac.authorization.k8s.io/kubeflow-pipelines-cache-role unchanged
+role.rbac.authorization.k8s.io/jupyter-web-app-jupyter-notebook-role unchanged
+role.rbac.authorization.k8s.io/ml-pipeline unchanged
+role.rbac.authorization.k8s.io/ml-pipeline-persistenceagent-role unchanged
+role.rbac.authorization.k8s.io/ml-pipeline-scheduledworkflow-role unchanged
+role.rbac.authorization.k8s.io/ml-pipeline-ui unchanged
+role.rbac.authorization.k8s.io/ml-pipeline-viewer-controller-role unchanged
+role.rbac.authorization.k8s.io/pipeline-runner unchanged
+role.rbac.authorization.k8s.io/seldon-leader-election-role unchanged
+role.rbac.authorization.k8s.io/kubeflow-pipelines-metadata-writer-role unchanged
+rolebinding.rbac.authorization.k8s.io/seldon-leader-election-rolebinding unchanged
+rolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-cache-binding unchanged
+rolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-cache-deployer-rolebinding unchanged
+rolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-metadata-writer-binding unchanged
+rolebinding.rbac.authorization.k8s.io/ml-pipeline unchanged
+rolebinding.rbac.authorization.k8s.io/ml-pipeline-persistenceagent-binding unchanged
+rolebinding.rbac.authorization.k8s.io/ml-pipeline-scheduledworkflow-binding unchanged
+rolebinding.rbac.authorization.k8s.io/ml-pipeline-ui unchanged
+rolebinding.rbac.authorization.k8s.io/ml-pipeline-viewer-crd-binding unchanged
+rolebinding.rbac.authorization.k8s.io/pipeline-runner-binding unchanged
+rolebinding.rbac.authorization.k8s.io/jupyter-web-app-jupyter-notebook-role-binding unchanged
+rolebinding.rbac.authorization.k8s.io/centraldashboard unchanged
+service/katib-mysql unchanged
+service/centraldashboard unchanged
+service/jupyter-web-app-service unchanged
+service/cache-server unchanged
+service/katib-db-manager unchanged
+service/argo-ui unchanged
+service/katib-ui unchanged
+service/kubeflow-pipelines-profile-controller unchanged
+service/metadata-db unchanged
+service/metadata-envoy-service unchanged
+service/metadata-grpc-service unchanged
+service/minio-service unchanged
+service/ml-pipeline unchanged
+service/admission-webhook-service unchanged
+service/ml-pipeline-visualizationserver unchanged
+service/mysql unchanged
+service/notebook-controller-service unchanged
+service/profiles-kfam unchanged
+service/pytorch-operator unchanged
+service/seldon-webhook-service unchanged
+service/tf-job-operator unchanged
+service/ml-pipeline-ui unchanged
+service/katib-controller configured
+daemonset.apps/nvidia-device-plugin-daemonset unchanged
+deployment.apps/argo-ui unchanged
+deployment.apps/cache-server configured
+deployment.apps/alb-ingress-controller unchanged
+deployment.apps/jupyter-web-app-deployment unchanged
+deployment.apps/katib-controller unchanged
+deployment.apps/katib-db-manager unchanged
+deployment.apps/katib-mysql unchanged
+deployment.apps/katib-ui unchanged
+deployment.apps/admission-webhook-deployment unchanged
+deployment.apps/metadata-db unchanged
+deployment.apps/metadata-envoy-deployment unchanged
+deployment.apps/metadata-grpc-deployment unchanged
+deployment.apps/metadata-writer configured
+deployment.apps/minio unchanged
+deployment.apps/ml-pipeline unchanged
+deployment.apps/ml-pipeline-persistenceagent configured
+deployment.apps/ml-pipeline-scheduledworkflow configured
+deployment.apps/ml-pipeline-ui unchanged
+deployment.apps/cache-deployer-deployment unchanged
+deployment.apps/ml-pipeline-visualizationserver unchanged
+deployment.apps/mpi-operator unchanged
+deployment.apps/mxnet-operator unchanged
+deployment.apps/mysql unchanged
+deployment.apps/notebook-controller-deployment unchanged
+deployment.apps/profiles-deployment configured
+deployment.apps/pytorch-operator unchanged
+deployment.apps/seldon-controller-manager configured
+deployment.apps/tf-job-operator unchanged
+deployment.apps/workflow-controller unchanged
+deployment.apps/kubeflow-pipelines-profile-controller unchanged
+deployment.apps/ml-pipeline-viewer-crd configured
+deployment.apps/centraldashboard unchanged
+mutatingwebhookconfiguration.admissionregistration.k8s.io/admission-webhook-mutating-webhook-configuration configured
+mutatingwebhookconfiguration.admissionregistration.k8s.io/seldon-mutating-webhook-configuration-kubeflow configured
+validatingwebhookconfiguration.admissionregistration.k8s.io/seldon-validating-webhook-configuration-kubeflow configured
+application.app.k8s.io/pytorch-operator unchanged
+application.app.k8s.io/kubeflow-pipelines unchanged
+application.app.k8s.io/minio configured
+application.app.k8s.io/mpi-operator unchanged
+application.app.k8s.io/mxnet-operator unchanged
+application.app.k8s.io/katib-crds unchanged
+application.app.k8s.io/notebook-controller-notebook-controller unchanged
+application.app.k8s.io/aws-nvidia-device-plugin unchanged
+application.app.k8s.io/pytorch-job-crds unchanged
+application.app.k8s.io/katib-controller unchanged
+application.app.k8s.io/seldon-core-operator unchanged
+application.app.k8s.io/tf-job-crds unchanged
+application.app.k8s.io/tf-job-operator unchanged
+application.app.k8s.io/webhook configured
+application.app.k8s.io/aws-alb-ingress-controller unchanged
+application.app.k8s.io/argo configured
+application.app.k8s.io/centraldashboard unchanged
+application.app.k8s.io/jupyter-web-app-jupyter-web-app unchanged
+application.app.k8s.io/profiles-profiles configured
+application.app.k8s.io/mysql configured
+certificate.cert-manager.io/seldon-serving-cert unchanged
+certificate.cert-manager.io/admission-webhook-cert unchanged
+compositecontroller.metacontroller.k8s.io/kubeflow-pipelines-profile-controller unchanged
+destinationrule.networking.istio.io/ml-pipeline-ui unchanged
+destinationrule.networking.istio.io/ml-pipeline-visualizationserver unchanged
+destinationrule.networking.istio.io/ml-pipeline unchanged
+destinationrule.networking.istio.io/ml-pipeline-mysql unchanged
+issuer.cert-manager.io/seldon-selfsigned-issuer unchanged
+profile.kubeflow.org/anonymous unchanged
+servicerole.rbac.istio.io/ml-pipeline-ui unchanged
+servicerole.rbac.istio.io/ml-pipeline-services unchanged
+servicerole.rbac.istio.io/cache-server unchanged
+servicerolebinding.rbac.istio.io/bind-ml-pipeline-internal unchanged
+servicerolebinding.rbac.istio.io/bind-cache-server-admission-webhook unchanged
+servicerolebinding.rbac.istio.io/bind-gateway-ml-pipeline-ui unchanged
+virtualservice.networking.istio.io/profiles-kfam unchanged
+virtualservice.networking.istio.io/ml-pipeline-ui unchanged
+virtualservice.networking.istio.io/metadata-grpc unchanged
+virtualservice.networking.istio.io/katib-ui unchanged
+virtualservice.networking.istio.io/jupyter-web-app-jupyter-web-app unchanged
+virtualservice.networking.istio.io/centraldashboard unchanged
+virtualservice.networking.istio.io/argo-ui unchanged
+configmap/istio-ingress-config unchanged
+ingress.networking.k8s.io/istio-ingress configured
+namespace/knative-serving unchanged
+secret/webhook-certs unchanged
+secret/istio-webhook-certs unchanged
+configmap/config-tracing unchanged
+configmap/config-domain unchanged
+configmap/config-gc unchanged
+configmap/config-leader-election unchanged
+configmap/config-deployment unchanged
+configmap/config-logging unchanged
+configmap/config-network unchanged
+configmap/config-observability unchanged
+configmap/config-istio unchanged
+configmap/config-defaults unchanged
+configmap/config-autoscaler unchanged
+serviceaccount/controller unchanged
+customresourcedefinition.apiextensions.k8s.io/services.serving.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/serverlessservices.networking.internal.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/routes.serving.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/metrics.autoscaling.internal.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/ingresses.networking.internal.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/images.caching.internal.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/configurations.serving.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/certificates.networking.internal.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/podautoscalers.autoscaling.internal.knative.dev unchanged
+customresourcedefinition.apiextensions.k8s.io/revisions.serving.knative.dev unchanged
+clusterrole.rbac.authorization.k8s.io/knative-serving-podspecable-binding unchanged
+clusterrole.rbac.authorization.k8s.io/knative-serving-namespaced-view unchanged
+clusterrole.rbac.authorization.k8s.io/knative-serving-namespaced-edit unchanged
+clusterrole.rbac.authorization.k8s.io/knative-serving-namespaced-admin unchanged
+clusterrole.rbac.authorization.k8s.io/knative-serving-istio unchanged
+clusterrole.rbac.authorization.k8s.io/knative-serving-core unchanged
+clusterrole.rbac.authorization.k8s.io/knative-serving-admin configured
+clusterrole.rbac.authorization.k8s.io/knative-serving-addressable-resolver unchanged
+clusterrolebinding.rbac.authorization.k8s.io/knative-serving-controller-admin unchanged
+service/istio-webhook unchanged
+service/webhook unchanged
+service/activator-service unchanged
+service/autoscaler unchanged
+service/controller unchanged
+deployment.apps/istio-webhook unchanged
+deployment.apps/webhook unchanged
+deployment.apps/autoscaler unchanged
+deployment.apps/networking-istio unchanged
+deployment.apps/controller configured
+deployment.apps/activator configured
+mutatingwebhookconfiguration.admissionregistration.k8s.io/webhook.istio.networking.internal.knative.dev unchanged
+mutatingwebhookconfiguration.admissionregistration.k8s.io/webhook.serving.knative.dev unchanged
+validatingwebhookconfiguration.admissionregistration.k8s.io/config.webhook.istio.networking.internal.knative.dev unchanged
+validatingwebhookconfiguration.admissionregistration.k8s.io/validation.webhook.serving.knative.dev unchanged
+validatingwebhookconfiguration.admissionregistration.k8s.io/config.webhook.serving.knative.dev unchanged
+application.app.k8s.io/knative-serving-crds configured
+application.app.k8s.io/knative-serving-install configured
+gateway.networking.istio.io/cluster-local-gateway unchanged
+horizontalpodautoscaler.autoscaling/activator unchanged
+image.caching.internal.knative.dev/queue-proxy unchanged
+servicerole.rbac.istio.io/istio-service-role unchanged
+servicerolebinding.rbac.istio.io/istio-service-role-binding unchanged
+secret/kfserving-webhook-server-secret unchanged
+configmap/inferenceservice-config unchanged
+customresourcedefinition.apiextensions.k8s.io/inferenceservices.serving.kubeflow.org unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-kfserving-edit unchanged
+clusterrole.rbac.authorization.k8s.io/kfserving-manager-role configured
+clusterrole.rbac.authorization.k8s.io/kfserving-proxy-role unchanged
+clusterrole.rbac.authorization.k8s.io/kubeflow-kfserving-admin configured
+clusterrole.rbac.authorization.k8s.io/kubeflow-kfserving-view unchanged
+clusterrolebinding.rbac.authorization.k8s.io/kfserving-manager-rolebinding unchanged
+clusterrolebinding.rbac.authorization.k8s.io/kfserving-proxy-rolebinding unchanged
+role.rbac.authorization.k8s.io/leader-election-role unchanged
+rolebinding.rbac.authorization.k8s.io/leader-election-rolebinding unchanged
+service/kfserving-controller-manager-metrics-service unchanged
+service/kfserving-controller-manager-service unchanged
+service/kfserving-webhook-server-service unchanged
+statefulset.apps/kfserving-controller-manager unchanged
+mutatingwebhookconfiguration.admissionregistration.k8s.io/inferenceservice.serving.kubeflow.org configured
+validatingwebhookconfiguration.admissionregistration.k8s.io/inferenceservice.serving.kubeflow.org configured
+application.app.k8s.io/kfserving unchanged
+certificate.cert-manager.io/serving-cert unchanged
+issuer.cert-manager.io/selfsigned-issuer unchanged
+configmap/spartakus-config unchanged
+serviceaccount/spartakus unchanged
+clusterrole.rbac.authorization.k8s.io/spartakus unchanged
+clusterrolebinding.rbac.authorization.k8s.io/spartakus unchanged
+deployment.apps/spartakus-volunteer unchanged
+application.app.k8s.io/spartakus configured
+NAME                                                         READY   STATUS             RESTARTS   AGE
+pod/admission-webhook-bootstrap-stateful-set-0               1/1     Running            0          12m
+pod/admission-webhook-deployment-5cd7dc96f5-qrhpd            1/1     Running            0          11m
+pod/alb-ingress-controller-667f996fbd-b89gw                  1/1     Running            0          12m
+pod/application-controller-stateful-set-0                    1/1     Running            0          13m
+pod/argo-ui-657cf69ff5-qbmt8                                 1/1     Running            0          12m
+pod/cache-deployer-deployment-5f4979f45-l8v49                2/2     Running            2          12m
+pod/cache-server-7859fd67f5-ntgl9                            2/2     Running            0          12m
+pod/centraldashboard-86744cbb7b-6t6rb                        1/1     Running            0          12m
+pod/jupyter-web-app-deployment-c76dc4bb5-ctbkf               1/1     Running            0          12m
+pod/katib-controller-7fcc95676b-rkcww                        1/1     Running            1          12m
+pod/katib-db-manager-67867f5498-ztqrw                        1/1     Running            0          12m
+pod/katib-mysql-6b5d848bf5-ngbqk                             1/1     Running            0          12m
+pod/katib-ui-65dc4cf6f5-djcrw                                1/1     Running            0          12m
+pod/kfserving-controller-manager-0                           2/2     Running            0          12m
+pod/kubeflow-pipelines-profile-controller-797fb44db9-d48c8   1/1     Running            0          12m
+pod/metacontroller-0                                         1/1     Running            0          12m
+pod/metadata-db-c65f4bc75-2jhhk                              1/1     Running            0          12m
+pod/metadata-envoy-deployment-67bd5954c-qq9h4                1/1     Running            0          12m
+pod/metadata-grpc-deployment-577c67c96f-4jg9m                1/1     Running            4          12m
+pod/metadata-writer-756dbdd478-cq5mv                         2/2     Running            0          12m
+pod/minio-54d995c97b-zz2wp                                   1/1     Running            0          12m
+pod/ml-pipeline-8d6749d9c-8vhnx                              2/2     Running            2          12m
+pod/ml-pipeline-persistenceagent-d984c9585-r6hwt             2/2     Running            0          12m
+pod/ml-pipeline-scheduledworkflow-5ccf4c9fcc-q6qnx           2/2     Running            0          12m
+pod/ml-pipeline-ui-8ccbf585c-2lv99                           2/2     Running            0          12m
+pod/ml-pipeline-viewer-crd-56c68f6c85-tljt9                  2/2     Running            3          12m
+pod/ml-pipeline-visualizationserver-7446b96877-8ql8m         2/2     Running            0          12m
+pod/mpi-operator-d5bfb8489-vjjmf                             0/1     CrashLoopBackOff   7          12m
+pod/mxnet-operator-7576d697d6-d6hmg                          1/1     Running            0          12m
+pod/mysql-74f8f99bc8-ljx7v                                   2/2     Running            0          12m
+pod/notebook-controller-deployment-dd4c74b47-qp4qw           1/1     Running            0          12m
+pod/nvidia-device-plugin-daemonset-4cvxd                     2/2     Running            0          12m
+pod/nvidia-device-plugin-daemonset-7wzdk                     2/2     Running            0          12m
+pod/nvidia-device-plugin-daemonset-9vf5q                     2/2     Running            0          12m
+pod/nvidia-device-plugin-daemonset-cm9vd                     2/2     Running            0          12m
+pod/nvidia-device-plugin-daemonset-hxmmr                     2/2     Running            0          12m
+pod/nvidia-device-plugin-daemonset-l2jvg                     2/2     Running            0          12m
+pod/profiles-deployment-65f54cb5c4-tzxf7                     2/2     Running            0          12m
+pod/pytorch-operator-847c8d55d8-9hlx2                        1/1     Running            0          12m
+pod/seldon-controller-manager-6bf8b45656-244l4               1/1     Running            0          12m
+pod/spark-operatorsparkoperator-fdfbfd99-ftfw2               1/1     Running            0          12m
+pod/spartakus-volunteer-558f8bfd47-cxdrq                     1/1     Running            0          12m
+pod/tf-job-operator-58477797f8-rrqg5                         1/1     Running            0          12m
+pod/workflow-controller-64fd7cffc5-cdbm6                     1/1     Running            0          12m
+
+NAME                                                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+service/admission-webhook-service                      ClusterIP   10.100.69.8      <none>        443/TCP             12m
+service/application-controller-service                 ClusterIP   10.100.124.156   <none>        443/TCP             13m
+service/argo-ui                                        NodePort    10.100.38.62     <none>        80:32622/TCP        12m
+service/cache-server                                   ClusterIP   10.100.9.160     <none>        443/TCP             12m
+service/centraldashboard                               ClusterIP   10.100.199.47    <none>        80/TCP              12m
+service/jupyter-web-app-service                        ClusterIP   10.100.26.9      <none>        80/TCP              12m
+service/katib-controller                               ClusterIP   10.100.117.55    <none>        443/TCP,8080/TCP    12m
+service/katib-db-manager                               ClusterIP   10.100.142.236   <none>        6789/TCP            12m
+service/katib-mysql                                    ClusterIP   10.100.15.72     <none>        3306/TCP            12m
+service/katib-ui                                       ClusterIP   10.100.166.100   <none>        80/TCP              12m
+service/kfserving-controller-manager-metrics-service   ClusterIP   10.100.91.54     <none>        8443/TCP            12m
+service/kfserving-controller-manager-service           ClusterIP   10.100.0.182     <none>        443/TCP             12m
+service/kfserving-webhook-server-service               ClusterIP   10.100.59.206    <none>        443/TCP             12m
+service/kubeflow-pipelines-profile-controller          ClusterIP   10.100.5.33      <none>        80/TCP              12m
+service/metadata-db                                    ClusterIP   10.100.22.111    <none>        3306/TCP            12m
+service/metadata-envoy-service                         ClusterIP   10.100.240.148   <none>        9090/TCP            12m
+service/metadata-grpc-service                          ClusterIP   10.100.107.224   <none>        8080/TCP            12m
+service/minio-service                                  ClusterIP   10.100.142.69    <none>        9000/TCP            12m
+service/ml-pipeline                                    ClusterIP   10.100.44.123    <none>        8888/TCP,8887/TCP   12m
+service/ml-pipeline-ui                                 ClusterIP   10.100.48.33     <none>        80/TCP              12m
+service/ml-pipeline-visualizationserver                ClusterIP   10.100.229.122   <none>        8888/TCP            12m
+service/mysql                                          ClusterIP   10.100.73.232    <none>        3306/TCP            12m
+service/notebook-controller-service                    ClusterIP   10.100.230.34    <none>        443/TCP             12m
+service/profiles-kfam                                  ClusterIP   10.100.67.2      <none>        8081/TCP            12m
+service/pytorch-operator                               ClusterIP   10.100.143.181   <none>        8443/TCP            12m
+service/seldon-webhook-service                         ClusterIP   10.100.253.204   <none>        443/TCP             12m
+service/tf-job-operator                                ClusterIP   10.100.108.110   <none>        8443/TCP            12m
+
+NAME                                            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+daemonset.apps/nvidia-device-plugin-daemonset   6         6         6       6            6           <none>          12m
+
+NAME                                                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/admission-webhook-deployment            1/1     1            1           12m
+deployment.apps/alb-ingress-controller                  1/1     1            1           12m
+deployment.apps/argo-ui                                 1/1     1            1           12m
+deployment.apps/cache-deployer-deployment               1/1     1            1           12m
+deployment.apps/cache-server                            1/1     1            1           12m
+deployment.apps/centraldashboard                        1/1     1            1           12m
+deployment.apps/jupyter-web-app-deployment              1/1     1            1           12m
+deployment.apps/katib-controller                        1/1     1            1           12m
+deployment.apps/katib-db-manager                        1/1     1            1           12m
+deployment.apps/katib-mysql                             1/1     1            1           12m
+deployment.apps/katib-ui                                1/1     1            1           12m
+deployment.apps/kubeflow-pipelines-profile-controller   1/1     1            1           12m
+deployment.apps/metadata-db                             1/1     1            1           12m
+deployment.apps/metadata-envoy-deployment               1/1     1            1           12m
+deployment.apps/metadata-grpc-deployment                1/1     1            1           12m
+deployment.apps/metadata-writer                         1/1     1            1           12m
+deployment.apps/minio                                   1/1     1            1           12m
+deployment.apps/ml-pipeline                             1/1     1            1           12m
+deployment.apps/ml-pipeline-persistenceagent            1/1     1            1           12m
+deployment.apps/ml-pipeline-scheduledworkflow           1/1     1            1           12m
+deployment.apps/ml-pipeline-ui                          1/1     1            1           12m
+deployment.apps/ml-pipeline-viewer-crd                  1/1     1            1           12m
+deployment.apps/ml-pipeline-visualizationserver         1/1     1            1           12m
+deployment.apps/mpi-operator                            0/1     1            0           12m
+deployment.apps/mxnet-operator                          1/1     1            1           12m
+deployment.apps/mysql                                   1/1     1            1           12m
+deployment.apps/notebook-controller-deployment          1/1     1            1           12m
+deployment.apps/profiles-deployment                     1/1     1            1           12m
+deployment.apps/pytorch-operator                        1/1     1            1           12m
+deployment.apps/seldon-controller-manager               1/1     1            1           12m
+deployment.apps/spark-operatorsparkoperator             1/1     1            1           12m
+deployment.apps/spartakus-volunteer                     1/1     1            1           12m
+deployment.apps/tf-job-operator                         1/1     1            1           12m
+deployment.apps/workflow-controller                     1/1     1            1           12m
+
+NAME                                                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/admission-webhook-deployment-5cd7dc96f5            1         1         1       12m
+replicaset.apps/alb-ingress-controller-667f996fbd                  1         1         1       12m
+replicaset.apps/argo-ui-657cf69ff5                                 1         1         1       12m
+replicaset.apps/cache-deployer-deployment-5f4979f45                1         1         1       12m
+replicaset.apps/cache-server-7859fd67f5                            1         1         1       12m
+replicaset.apps/centraldashboard-86744cbb7b                        1         1         1       12m
+replicaset.apps/jupyter-web-app-deployment-c76dc4bb5               1         1         1       12m
+replicaset.apps/katib-controller-7fcc95676b                        1         1         1       12m
+replicaset.apps/katib-db-manager-67867f5498                        1         1         1       12m
+replicaset.apps/katib-mysql-6b5d848bf5                             1         1         1       12m
+replicaset.apps/katib-ui-65dc4cf6f5                                1         1         1       12m
+replicaset.apps/kubeflow-pipelines-profile-controller-797fb44db9   1         1         1       12m
+replicaset.apps/metadata-db-c65f4bc75                              1         1         1       12m
+replicaset.apps/metadata-envoy-deployment-67bd5954c                1         1         1       12m
+replicaset.apps/metadata-grpc-deployment-577c67c96f                1         1         1       12m
+replicaset.apps/metadata-writer-756dbdd478                         1         1         1       12m
+replicaset.apps/minio-54d995c97b                                   1         1         1       12m
+replicaset.apps/ml-pipeline-8d6749d9c                              1         1         1       12m
+replicaset.apps/ml-pipeline-persistenceagent-d984c9585             1         1         1       12m
+replicaset.apps/ml-pipeline-scheduledworkflow-5ccf4c9fcc           1         1         1       12m
+replicaset.apps/ml-pipeline-ui-8ccbf585c                           1         1         1       12m
+replicaset.apps/ml-pipeline-viewer-crd-56c68f6c85                  1         1         1       12m
+replicaset.apps/ml-pipeline-visualizationserver-7446b96877         1         1         1       12m
+replicaset.apps/mpi-operator-d5bfb8489                             1         1         0       12m
+replicaset.apps/mxnet-operator-7576d697d6                          1         1         1       12m
+replicaset.apps/mysql-74f8f99bc8                                   1         1         1       12m
+replicaset.apps/notebook-controller-deployment-dd4c74b47           1         1         1       12m
+replicaset.apps/profiles-deployment-65f54cb5c4                     1         1         1       12m
+replicaset.apps/pytorch-operator-847c8d55d8                        1         1         1       12m
+replicaset.apps/seldon-controller-manager-6bf8b45656               1         1         1       12m
+replicaset.apps/spark-operatorsparkoperator-fdfbfd99               1         1         1       12m
+replicaset.apps/spartakus-volunteer-558f8bfd47                     1         1         1       12m
+replicaset.apps/tf-job-operator-58477797f8                         1         1         1       12m
+replicaset.apps/workflow-controller-64fd7cffc5                     1         1         1       12m
+
+NAME                                                        READY   AGE
+statefulset.apps/admission-webhook-bootstrap-stateful-set   1/1     12m
+statefulset.apps/application-controller-stateful-set        1/1     13m
+statefulset.apps/kfserving-controller-manager               1/1     12m
+statefulset.apps/metacontroller                             1/1     12m
