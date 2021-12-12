@@ -60,7 +60,7 @@ kind: ClusterConfig
 metadata:
   name: ${AWS_CLUSTER_NAME}
   region: ${AWS_REGION}
-  version: 1.18
+  version: "1.18"
 
 managedNodeGroups:
 - name: nodegroup
