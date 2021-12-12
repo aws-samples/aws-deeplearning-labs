@@ -1,0 +1,925 @@
+eks cluster name is eksworkshop-YKtHnj8R17kYM
+aws region is us-west-2
+NAME                                          STATUS   ROLES    AGE     VERSION
+ip-192-168-58-22.us-west-2.compute.internal   Ready    <none>   8m24s   v1.21.5-eks-bc4871b
+ip-192-168-7-23.us-west-2.compute.internal    Ready    <none>   8m24s   v1.21.5-eks-bc4871b
+ip-192-168-94-51.us-west-2.compute.internal   Ready    <none>   8m25s   v1.21.5-eks-bc4871b
+export ROLE_NAME=eksctl-eksworkshop-YKtHnj8R17kYM-NodeInstanceRole-22M3W1ZHMWVQ
+2021-12-12 06:29:43 [ℹ]  scaling nodegroup "nodegroup" in cluster eksworkshop-YKtHnj8R17kYM
+2021-12-12 06:29:44 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 06:30:00 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 06:30:17 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 06:30:37 [ℹ]  waiting for scaling of nodegroup "nodegroup" to complete
+2021-12-12 06:30:37 [ℹ]  nodegroup successfully scaled
+‘/tmp/kfctl’ -> ‘/usr/local/bin/kfctl’
+2021-12-12 06:30:40 [ℹ]  eksctl version 0.76.0
+2021-12-12 06:30:40 [ℹ]  using region us-west-2
+2021-12-12 06:30:40 [✔]  saved kubeconfig as "/home/ec2-user/.kube/config"
+namespace/cert-manager created
+namespace/kubeflow configured
+serviceaccount/application-controller-service-account created
+customresourcedefinition.apiextensions.k8s.io/applications.app.k8s.io created
+clusterrole.rbac.authorization.k8s.io/application-controller-cluster-role created
+clusterrolebinding.rbac.authorization.k8s.io/application-controller-cluster-role-binding created
+service/application-controller-service created
+statefulset.apps/application-controller-stateful-set created
+application.app.k8s.io/application-controller-kubeflow created
+namespace/istio-system configured
+configmap/istio created
+configmap/istio-galley-configuration created
+configmap/istio-security-custom-resources created
+configmap/istio-sidecar-injector created
+configmap/istio-install-parameters-5kmkd2f29g created
+configmap/prometheus created
+serviceaccount/istio-pilot-service-account created
+serviceaccount/istio-security-post-install-account created
+serviceaccount/istio-nodeagent-service-account created
+serviceaccount/istio-multi created
+serviceaccount/istio-mixer-service-account created
+serviceaccount/istio-ingressgateway-service-account created
+serviceaccount/prometheus created
+serviceaccount/istio-citadel-service-account created
+serviceaccount/istio-galley-service-account created
+serviceaccount/istio-sidecar-injector-service-account created
+customresourcedefinition.apiextensions.k8s.io/authorizationpolicies.rbac.istio.io created
+customresourcedefinition.apiextensions.k8s.io/policies.authentication.istio.io created
+customresourcedefinition.apiextensions.k8s.io/quotaspecbindings.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/quotaspecs.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/rbacconfigs.rbac.istio.io created
+customresourcedefinition.apiextensions.k8s.io/rules.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/serviceentries.networking.istio.io created
+customresourcedefinition.apiextensions.k8s.io/meshpolicies.authentication.istio.io created
+customresourcedefinition.apiextensions.k8s.io/serviceroles.rbac.istio.io created
+customresourcedefinition.apiextensions.k8s.io/sidecars.networking.istio.io created
+customresourcedefinition.apiextensions.k8s.io/templates.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/virtualservices.networking.istio.io created
+customresourcedefinition.apiextensions.k8s.io/issuers.certmanager.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/clusterrbacconfigs.rbac.istio.io created
+customresourcedefinition.apiextensions.k8s.io/httpapispecs.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/httpapispecbindings.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/handlers.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/gateways.networking.istio.io created
+customresourcedefinition.apiextensions.k8s.io/envoyfilters.networking.istio.io created
+customresourcedefinition.apiextensions.k8s.io/destinationrules.networking.istio.io created
+customresourcedefinition.apiextensions.k8s.io/clusterissuers.certmanager.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/servicerolebindings.rbac.istio.io created
+customresourcedefinition.apiextensions.k8s.io/challenges.certmanager.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/certificates.certmanager.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/adapters.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/instances.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/attributemanifests.config.istio.io created
+customresourcedefinition.apiextensions.k8s.io/orders.certmanager.k8s.io created
+clusterrole.rbac.authorization.k8s.io/istio-mixer-istio-system created
+clusterrole.rbac.authorization.k8s.io/istio-reader created
+clusterrole.rbac.authorization.k8s.io/istio-citadel-istio-system created
+clusterrole.rbac.authorization.k8s.io/prometheus-istio-system created
+clusterrole.rbac.authorization.k8s.io/istio-security-post-install-istio-system created
+clusterrole.rbac.authorization.k8s.io/istio-nodeagent-istio-system created
+clusterrole.rbac.authorization.k8s.io/istio-galley-istio-system created
+clusterrole.rbac.authorization.k8s.io/istio-sidecar-injector-istio-system created
+clusterrole.rbac.authorization.k8s.io/istio-pilot-istio-system created
+clusterrolebinding.rbac.authorization.k8s.io/istio-mixer-admin-role-binding-istio-system created
+clusterrolebinding.rbac.authorization.k8s.io/istio-nodeagent-istio-system created
+clusterrolebinding.rbac.authorization.k8s.io/istio-galley-admin-role-binding-istio-system created
+clusterrolebinding.rbac.authorization.k8s.io/istio-sidecar-injector-admin-role-binding-istio-system created
+clusterrolebinding.rbac.authorization.k8s.io/istio-citadel-istio-system created
+clusterrolebinding.rbac.authorization.k8s.io/istio-security-post-install-role-binding-istio-system created
+clusterrolebinding.rbac.authorization.k8s.io/istio-multi created
+clusterrolebinding.rbac.authorization.k8s.io/istio-pilot-istio-system created
+clusterrolebinding.rbac.authorization.k8s.io/prometheus-istio-system created
+role.rbac.authorization.k8s.io/istio-ingressgateway-sds created
+rolebinding.rbac.authorization.k8s.io/istio-ingressgateway-sds created
+service/istio-pilot created
+service/istio-citadel created
+service/istio-galley created
+service/istio-ingressgateway created
+service/istio-policy created
+service/istio-sidecar-injector created
+service/istio-telemetry created
+service/prometheus created
+daemonset.apps/istio-nodeagent created
+deployment.apps/prometheus created
+deployment.apps/istio-galley created
+deployment.apps/istio-ingressgateway created
+deployment.apps/istio-pilot created
+deployment.apps/istio-policy created
+deployment.apps/istio-citadel created
+deployment.apps/istio-telemetry created
+deployment.apps/istio-sidecar-injector created
+job.batch/istio-security-post-install-release-1.3-latest-daily created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/istio-sidecar-injector created
+destinationrule.networking.istio.io/istio-telemetry created
+destinationrule.networking.istio.io/istio-policy created
+horizontalpodautoscaler.autoscaling/istio-telemetry created
+horizontalpodautoscaler.autoscaling/istio-ingressgateway created
+horizontalpodautoscaler.autoscaling/istio-pilot created
+horizontalpodautoscaler.autoscaling/istio-policy created
+poddisruptionbudget.policy/istio-telemetry created
+poddisruptionbudget.policy/istio-policy created
+poddisruptionbudget.policy/istio-sidecar-injector created
+poddisruptionbudget.policy/istio-ingressgateway created
+poddisruptionbudget.policy/istio-galley created
+poddisruptionbudget.policy/istio-pilot created
+servicerole.rbac.istio.io/istio-ingressgateway created
+servicerolebinding.rbac.istio.io/istio-ingressgateway created
+attributemanifest.config.istio.io/kubernetes created
+attributemanifest.config.istio.io/istioproxy created
+handler.config.istio.io/kubernetesenv created
+handler.config.istio.io/prometheus created
+instance.config.istio.io/requestcount created
+instance.config.istio.io/requestsize created
+instance.config.istio.io/tcpbytereceived created
+instance.config.istio.io/tcpconnectionsclosed created
+instance.config.istio.io/requestduration created
+instance.config.istio.io/responsesize created
+instance.config.istio.io/attributes created
+instance.config.istio.io/tcpconnectionsopened created
+instance.config.istio.io/tcpbytesent created
+rule.config.istio.io/promtcpconnectionopen created
+rule.config.istio.io/tcpkubeattrgenrulerule created
+rule.config.istio.io/promhttp created
+rule.config.istio.io/kubeattrgenrulerule created
+rule.config.istio.io/promtcpconnectionclosed created
+rule.config.istio.io/promtcp created
+namespace/istio-system configured
+configmap/cluster-local-gateway-parameters-tbbdb2842d created
+serviceaccount/cluster-local-gateway-service-account created
+serviceaccount/istio-multi configured
+clusterrole.rbac.authorization.k8s.io/istio-reader configured
+clusterrolebinding.rbac.authorization.k8s.io/istio-multi configured
+service/cluster-local-gateway created
+deployment.apps/cluster-local-gateway created
+horizontalpodautoscaler.autoscaling/cluster-local-gateway created
+poddisruptionbudget.policy/cluster-local-gateway created
+configmap/istio-parameters-cm9hckfgmb created
+clusterrole.rbac.authorization.k8s.io/kubeflow-istio-admin created
+clusterrole.rbac.authorization.k8s.io/kubeflow-istio-edit created
+clusterrole.rbac.authorization.k8s.io/kubeflow-istio-view created
+clusterrbacconfig.rbac.istio.io/default created
+gateway.networking.istio.io/kubeflow-gateway created
+serviceentry.networking.istio.io/google-api-entry created
+serviceentry.networking.istio.io/google-storage-api-entry created
+virtualservice.networking.istio.io/google-api-vs created
+virtualservice.networking.istio.io/google-storage-api-vs created
+virtualservice.networking.istio.io/grafana-vs created
+customresourcedefinition.apiextensions.k8s.io/certificaterequests.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/certificates.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/challenges.acme.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/clusterissuers.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/issuers.cert-manager.io created
+customresourcedefinition.apiextensions.k8s.io/orders.acme.cert-manager.io created
+configmap/cert-manager-kube-params-parameters created
+role.rbac.authorization.k8s.io/cert-manager-cainjector:leaderelection created
+role.rbac.authorization.k8s.io/cert-manager:leaderelection created
+rolebinding.rbac.authorization.k8s.io/cert-manager-cainjector:leaderelection created
+rolebinding.rbac.authorization.k8s.io/cert-manager-webhook:webhook-authentication-reader created
+rolebinding.rbac.authorization.k8s.io/cert-manager:leaderelection created
+namespace/cert-manager configured
+configmap/cert-manager-parameters created
+serviceaccount/cert-manager created
+serviceaccount/cert-manager-cainjector created
+serviceaccount/cert-manager-webhook created
+clusterrole.rbac.authorization.k8s.io/cert-manager-webhook:webhook-requester created
+clusterrole.rbac.authorization.k8s.io/cert-manager-view created
+clusterrole.rbac.authorization.k8s.io/cert-manager-edit created
+clusterrole.rbac.authorization.k8s.io/cert-manager-cainjector created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificates created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-challenges created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-issuers created
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-orders created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-webhook:auth-delegator created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-cainjector created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-challenges created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-issuers created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-orders created
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificates created
+service/cert-manager created
+service/cert-manager-webhook created
+deployment.apps/cert-manager created
+deployment.apps/cert-manager-cainjector created
+deployment.apps/cert-manager-webhook created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook created
+validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook created
+apiservice.apiregistration.k8s.io/v1beta1.webhook.cert-manager.io created
+application.app.k8s.io/cert-manager created
+namespace/cert-manager unchanged
+configmap/cert-manager-parameters unchanged
+serviceaccount/cert-manager unchanged
+serviceaccount/cert-manager-cainjector unchanged
+serviceaccount/cert-manager-webhook unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-webhook:webhook-requester unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-view unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-edit unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-webhook:auth-delegator configured
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+service/cert-manager unchanged
+service/cert-manager-webhook unchanged
+deployment.apps/cert-manager unchanged
+deployment.apps/cert-manager-cainjector configured
+deployment.apps/cert-manager-webhook configured
+mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+apiservice.apiregistration.k8s.io/v1beta1.webhook.cert-manager.io unchanged
+application.app.k8s.io/cert-manager configured
+namespace/cert-manager unchanged
+configmap/cert-manager-parameters unchanged
+serviceaccount/cert-manager unchanged
+serviceaccount/cert-manager-cainjector unchanged
+serviceaccount/cert-manager-webhook unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-webhook:webhook-requester unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-view unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-edit unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-webhook:auth-delegator configured
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+service/cert-manager unchanged
+service/cert-manager-webhook unchanged
+deployment.apps/cert-manager unchanged
+deployment.apps/cert-manager-cainjector configured
+deployment.apps/cert-manager-webhook configured
+mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+apiservice.apiregistration.k8s.io/v1beta1.webhook.cert-manager.io unchanged
+application.app.k8s.io/cert-manager configured
+namespace/cert-manager unchanged
+configmap/cert-manager-parameters unchanged
+serviceaccount/cert-manager unchanged
+serviceaccount/cert-manager-cainjector unchanged
+serviceaccount/cert-manager-webhook unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-webhook:webhook-requester unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-view unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-edit unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-webhook:auth-delegator configured
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+service/cert-manager unchanged
+service/cert-manager-webhook unchanged
+deployment.apps/cert-manager unchanged
+deployment.apps/cert-manager-cainjector configured
+deployment.apps/cert-manager-webhook configured
+mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+apiservice.apiregistration.k8s.io/v1beta1.webhook.cert-manager.io unchanged
+application.app.k8s.io/cert-manager configured
+namespace/cert-manager unchanged
+configmap/cert-manager-parameters unchanged
+serviceaccount/cert-manager unchanged
+serviceaccount/cert-manager-cainjector unchanged
+serviceaccount/cert-manager-webhook unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-webhook:webhook-requester unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-view unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-edit unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-webhook:auth-delegator configured
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+service/cert-manager unchanged
+service/cert-manager-webhook unchanged
+deployment.apps/cert-manager unchanged
+deployment.apps/cert-manager-cainjector configured
+deployment.apps/cert-manager-webhook configured
+mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+apiservice.apiregistration.k8s.io/v1beta1.webhook.cert-manager.io unchanged
+application.app.k8s.io/cert-manager configured
+namespace/cert-manager unchanged
+configmap/cert-manager-parameters unchanged
+serviceaccount/cert-manager unchanged
+serviceaccount/cert-manager-cainjector unchanged
+serviceaccount/cert-manager-webhook unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-webhook:webhook-requester unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-view unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-edit unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrole.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-webhook:auth-delegator configured
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-cainjector unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-challenges unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-clusterissuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-ingress-shim unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-issuers unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-orders unchanged
+clusterrolebinding.rbac.authorization.k8s.io/cert-manager-controller-certificates unchanged
+service/cert-manager unchanged
+service/cert-manager-webhook unchanged
+deployment.apps/cert-manager unchanged
+deployment.apps/cert-manager-cainjector configured
+deployment.apps/cert-manager-webhook configured
+mutatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+validatingwebhookconfiguration.admissionregistration.k8s.io/cert-manager-webhook configured
+apiservice.apiregistration.k8s.io/v1beta1.webhook.cert-manager.io unchanged
+application.app.k8s.io/cert-manager configured
+clusterissuer.cert-manager.io/kubeflow-self-signing-issuer created
+serviceaccount/meta-controller-service created
+customresourcedefinition.apiextensions.k8s.io/compositecontrollers.metacontroller.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/controllerrevisions.metacontroller.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/decoratorcontrollers.metacontroller.k8s.io created
+clusterrolebinding.rbac.authorization.k8s.io/meta-controller-cluster-role-binding created
+statefulset.apps/metacontroller created
+configmap/oidc-authservice-parameters created
+persistentvolumeclaim/authservice-pvc created
+service/authservice created
+statefulset.apps/authservice created
+application.app.k8s.io/oidc-authservice created
+envoyfilter.networking.istio.io/authn-filter created
+namespace/auth created
+configmap/dex-parameters created
+configmap/dex created
+configmap/dex-config created
+serviceaccount/dex created
+customresourcedefinition.apiextensions.k8s.io/authcodes.dex.coreos.com created
+clusterrole.rbac.authorization.k8s.io/dex created
+clusterrolebinding.rbac.authorization.k8s.io/dex created
+service/dex created
+deployment.apps/dex created
+virtualservice.networking.istio.io/dex created
+configmap/admission-webhook-bootstrap-config-map created
+serviceaccount/admission-webhook-bootstrap-service-account created
+clusterrole.rbac.authorization.k8s.io/admission-webhook-bootstrap-cluster-role created
+clusterrolebinding.rbac.authorization.k8s.io/admission-webhook-bootstrap-cluster-role-binding created
+statefulset.apps/admission-webhook-bootstrap-stateful-set created
+application.app.k8s.io/bootstrap created
+serviceaccount/spark-operatoroperator-sa created
+serviceaccount/spark-operatorspark created
+customresourcedefinition.apiextensions.k8s.io/scheduledsparkapplications.sparkoperator.k8s.io created
+customresourcedefinition.apiextensions.k8s.io/sparkapplications.sparkoperator.k8s.io created
+clusterrole.rbac.authorization.k8s.io/spark-operatoroperator-cr created
+clusterrolebinding.rbac.authorization.k8s.io/spark-operatorsparkoperator-crb created
+role.rbac.authorization.k8s.io/spark-operatorspark-role created
+rolebinding.rbac.authorization.k8s.io/spark-operatorspark-role-binding created
+deployment.apps/spark-operatorsparkoperator created
+application.app.k8s.io/spark-operator created
+secret/mysql-secret-fd5gktm75t created
+secret/mlpipeline-minio-artifact created
+secret/metadata-db-secrets created
+secret/katib-mysql-secrets created
+secret/katib-controller created
+configmap/admission-webhook-admission-webhook-parameters created
+configmap/kubeflow-config created
+configmap/kubeflow-pipelines-profile-controller-code-gd97t2m5f5 created
+configmap/kubeflow-pipelines-profile-controller-env-mgh6th2gff created
+configmap/metadata-db-parameters created
+configmap/metadata-grpc-configmap created
+configmap/metadata-ui-parameters created
+configmap/ml-pipeline-ui-configmap created
+configmap/mpi-operator-config created
+configmap/pipeline-install-config-2829cc67f8 created
+configmap/pipeline-api-server-config-f4t72426kt created
+configmap/pipeline-upstream-install-config-d7hkh24mdg created
+configmap/profiles-profiles-config-4mgcmtgk6t created
+configmap/seldon-config created
+configmap/trial-template created
+configmap/katib-config created
+configmap/workflow-controller-parameters created
+configmap/jupyter-web-app-jupyter-web-app-config-24bth2gbkc created
+configmap/default-install-config-h877hbtmf7 created
+configmap/centraldashboard-links-config created
+configmap/aws-alb-ingress-controller-config created
+configmap/notebook-controller-notebook-controller-config-h4d668t5tb created
+configmap/workflow-controller-configmap created
+persistentvolumeclaim/metadata-mysql created
+persistentvolumeclaim/mysql-pv-claim created
+persistentvolumeclaim/minio-pvc created
+persistentvolumeclaim/katib-mysql created
+serviceaccount/kubeflow-pipelines-viewer created
+serviceaccount/ml-pipeline-viewer-crd-service-account created
+serviceaccount/ml-pipeline-visualizationserver created
+serviceaccount/mpi-operator created
+serviceaccount/mxnet-operator created
+serviceaccount/notebook-controller-service-account created
+serviceaccount/pipeline-runner created
+serviceaccount/profiles-controller-service-account configured
+serviceaccount/pytorch-operator created
+serviceaccount/seldon-manager created
+serviceaccount/tf-job-dashboard created
+serviceaccount/tf-job-operator created
+serviceaccount/ml-pipeline-ui created
+serviceaccount/ml-pipeline-scheduledworkflow created
+serviceaccount/kubeflow-pipelines-cache-deployer-sa created
+serviceaccount/kubeflow-pipelines-cache created
+serviceaccount/katib-ui created
+serviceaccount/katib-controller created
+serviceaccount/jupyter-web-app-service-account created
+serviceaccount/centraldashboard created
+serviceaccount/argo-ui created
+serviceaccount/argo created
+serviceaccount/alb-ingress-controller configured
+serviceaccount/admission-webhook-service-account created
+serviceaccount/kubeflow-pipelines-container-builder created
+serviceaccount/kubeflow-pipelines-metadata-writer created
+serviceaccount/ml-pipeline created
+serviceaccount/ml-pipeline-persistenceagent created
+customresourcedefinition.apiextensions.k8s.io/experiments.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/mpijobs.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/mxjobs.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/notebooks.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/poddefaults.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/profiles.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/pytorchjobs.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/scheduledworkflows.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/seldondeployments.machinelearning.seldon.io created
+customresourcedefinition.apiextensions.k8s.io/suggestions.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/tfjobs.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/trials.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/viewers.kubeflow.org created
+customresourcedefinition.apiextensions.k8s.io/workflows.argoproj.io created
+clusterrole.rbac.authorization.k8s.io/alb-ingress-controller created
+clusterrole.rbac.authorization.k8s.io/kubeflow-kubernetes-view created
+clusterrole.rbac.authorization.k8s.io/kubeflow-mpijobs-admin created
+clusterrole.rbac.authorization.k8s.io/kubeflow-mpijobs-edit created
+clusterrole.rbac.authorization.k8s.io/kubeflow-mpijobs-view created
+clusterrole.rbac.authorization.k8s.io/kubeflow-mxjobs-admin created
+clusterrole.rbac.authorization.k8s.io/kubeflow-mxjobs-edit created
+clusterrole.rbac.authorization.k8s.io/kubeflow-mxjobs-view created
+clusterrole.rbac.authorization.k8s.io/kubeflow-pipelines-cache-deployer-clusterrole created
+clusterrole.rbac.authorization.k8s.io/kubeflow-pipelines-cache-role created
+clusterrole.rbac.authorization.k8s.io/kubeflow-pipelines-metadata-writer-role created
+clusterrole.rbac.authorization.k8s.io/kubeflow-pytorchjobs-admin created
+clusterrole.rbac.authorization.k8s.io/kubeflow-pytorchjobs-edit created
+clusterrole.rbac.authorization.k8s.io/kubeflow-pytorchjobs-view created
+clusterrole.rbac.authorization.k8s.io/kubeflow-tfjobs-admin created
+clusterrole.rbac.authorization.k8s.io/kubeflow-tfjobs-edit created
+clusterrole.rbac.authorization.k8s.io/kubeflow-tfjobs-view created
+clusterrole.rbac.authorization.k8s.io/kubeflow-view created
+clusterrole.rbac.authorization.k8s.io/ml-pipeline-persistenceagent-role created
+clusterrole.rbac.authorization.k8s.io/ml-pipeline-scheduledworkflow-role created
+clusterrole.rbac.authorization.k8s.io/ml-pipeline-ui created
+clusterrole.rbac.authorization.k8s.io/ml-pipeline-viewer-controller-role created
+clusterrole.rbac.authorization.k8s.io/mpi-operator created
+clusterrole.rbac.authorization.k8s.io/notebook-controller-kubeflow-notebooks-admin created
+clusterrole.rbac.authorization.k8s.io/notebook-controller-kubeflow-notebooks-edit created
+clusterrole.rbac.authorization.k8s.io/notebook-controller-kubeflow-notebooks-view created
+clusterrole.rbac.authorization.k8s.io/notebook-controller-role created
+clusterrole.rbac.authorization.k8s.io/seldon-manager-role-kubeflow created
+clusterrole.rbac.authorization.k8s.io/seldon-manager-sas-role-kubeflow created
+clusterrole.rbac.authorization.k8s.io/argo created
+clusterrole.rbac.authorization.k8s.io/admission-webhook-kubeflow-poddefaults-edit created
+clusterrole.rbac.authorization.k8s.io/ml-pipeline created
+clusterrole.rbac.authorization.k8s.io/mxnet-operator created
+clusterrole.rbac.authorization.k8s.io/pytorch-operator created
+clusterrole.rbac.authorization.k8s.io/tf-job-operator created
+clusterrole.rbac.authorization.k8s.io/admission-webhook-kubeflow-poddefaults-admin created
+clusterrole.rbac.authorization.k8s.io/admission-webhook-cluster-role created
+clusterrole.rbac.authorization.k8s.io/kubeflow-kubernetes-edit created
+clusterrole.rbac.authorization.k8s.io/kubeflow-kubernetes-admin created
+clusterrole.rbac.authorization.k8s.io/kubeflow-katib-view created
+clusterrole.rbac.authorization.k8s.io/kubeflow-katib-edit created
+clusterrole.rbac.authorization.k8s.io/kubeflow-katib-admin created
+clusterrole.rbac.authorization.k8s.io/kubeflow-edit created
+clusterrole.rbac.authorization.k8s.io/kubeflow-admin created
+clusterrole.rbac.authorization.k8s.io/katib-ui created
+clusterrole.rbac.authorization.k8s.io/katib-controller created
+clusterrole.rbac.authorization.k8s.io/jupyter-web-app-kubeflow-notebook-ui-view created
+clusterrole.rbac.authorization.k8s.io/jupyter-web-app-kubeflow-notebook-ui-edit created
+clusterrole.rbac.authorization.k8s.io/admission-webhook-kubeflow-poddefaults-view created
+clusterrole.rbac.authorization.k8s.io/jupyter-web-app-cluster-role created
+clusterrole.rbac.authorization.k8s.io/centraldashboard created
+clusterrole.rbac.authorization.k8s.io/jupyter-web-app-kubeflow-notebook-ui-admin created
+clusterrole.rbac.authorization.k8s.io/argo-ui created
+clusterrolebinding.rbac.authorization.k8s.io/seldon-manager-sas-rolebinding-kubeflow created
+clusterrolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-cache-deployer-clusterrolebinding created
+clusterrolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-metadata-writer-binding created
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline-persistenceagent-binding created
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline-scheduledworkflow-binding created
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline-ui created
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline-viewer-crd-binding created
+clusterrolebinding.rbac.authorization.k8s.io/mpi-operator created
+clusterrolebinding.rbac.authorization.k8s.io/notebook-controller-role-binding created
+clusterrolebinding.rbac.authorization.k8s.io/profiles-cluster-role-binding created
+clusterrolebinding.rbac.authorization.k8s.io/seldon-manager-rolebinding-kubeflow created
+clusterrolebinding.rbac.authorization.k8s.io/katib-ui created
+clusterrolebinding.rbac.authorization.k8s.io/argo created
+clusterrolebinding.rbac.authorization.k8s.io/argo-ui created
+clusterrolebinding.rbac.authorization.k8s.io/ml-pipeline created
+clusterrolebinding.rbac.authorization.k8s.io/mxnet-operator created
+clusterrolebinding.rbac.authorization.k8s.io/pytorch-operator created
+clusterrolebinding.rbac.authorization.k8s.io/tf-job-operator created
+clusterrolebinding.rbac.authorization.k8s.io/katib-controller created
+clusterrolebinding.rbac.authorization.k8s.io/jupyter-web-app-cluster-role-binding created
+clusterrolebinding.rbac.authorization.k8s.io/centraldashboard created
+clusterrolebinding.rbac.authorization.k8s.io/alb-ingress-controller created
+clusterrolebinding.rbac.authorization.k8s.io/admission-webhook-cluster-role-binding created
+clusterrolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-cache-binding created
+role.rbac.authorization.k8s.io/kubeflow-pipelines-cache-deployer-role created
+role.rbac.authorization.k8s.io/centraldashboard created
+role.rbac.authorization.k8s.io/kubeflow-pipelines-cache-role created
+role.rbac.authorization.k8s.io/jupyter-web-app-jupyter-notebook-role created
+role.rbac.authorization.k8s.io/ml-pipeline created
+role.rbac.authorization.k8s.io/ml-pipeline-persistenceagent-role created
+role.rbac.authorization.k8s.io/ml-pipeline-scheduledworkflow-role created
+role.rbac.authorization.k8s.io/ml-pipeline-ui created
+role.rbac.authorization.k8s.io/ml-pipeline-viewer-controller-role created
+role.rbac.authorization.k8s.io/pipeline-runner created
+role.rbac.authorization.k8s.io/seldon-leader-election-role created
+role.rbac.authorization.k8s.io/kubeflow-pipelines-metadata-writer-role created
+rolebinding.rbac.authorization.k8s.io/seldon-leader-election-rolebinding created
+rolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-cache-binding created
+rolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-cache-deployer-rolebinding created
+rolebinding.rbac.authorization.k8s.io/kubeflow-pipelines-metadata-writer-binding created
+rolebinding.rbac.authorization.k8s.io/ml-pipeline created
+rolebinding.rbac.authorization.k8s.io/ml-pipeline-persistenceagent-binding created
+rolebinding.rbac.authorization.k8s.io/ml-pipeline-scheduledworkflow-binding created
+rolebinding.rbac.authorization.k8s.io/ml-pipeline-ui created
+rolebinding.rbac.authorization.k8s.io/ml-pipeline-viewer-crd-binding created
+rolebinding.rbac.authorization.k8s.io/pipeline-runner-binding created
+rolebinding.rbac.authorization.k8s.io/jupyter-web-app-jupyter-notebook-role-binding created
+rolebinding.rbac.authorization.k8s.io/centraldashboard created
+service/katib-mysql created
+service/centraldashboard created
+service/jupyter-web-app-service created
+service/cache-server created
+service/katib-db-manager created
+service/argo-ui created
+service/katib-ui created
+service/kubeflow-pipelines-profile-controller created
+service/metadata-db created
+service/metadata-envoy-service created
+service/metadata-grpc-service created
+service/minio-service created
+service/ml-pipeline created
+service/admission-webhook-service created
+service/ml-pipeline-visualizationserver created
+service/mysql created
+service/notebook-controller-service created
+service/profiles-kfam created
+service/pytorch-operator created
+service/seldon-webhook-service created
+service/tf-job-operator created
+service/ml-pipeline-ui created
+service/katib-controller created
+daemonset.apps/nvidia-device-plugin-daemonset created
+deployment.apps/argo-ui created
+deployment.apps/cache-server created
+deployment.apps/alb-ingress-controller created
+deployment.apps/jupyter-web-app-deployment created
+deployment.apps/katib-controller created
+deployment.apps/katib-db-manager created
+deployment.apps/katib-mysql created
+deployment.apps/katib-ui created
+deployment.apps/admission-webhook-deployment created
+deployment.apps/metadata-db created
+deployment.apps/metadata-envoy-deployment created
+deployment.apps/metadata-grpc-deployment created
+deployment.apps/metadata-writer created
+deployment.apps/minio created
+deployment.apps/ml-pipeline created
+deployment.apps/ml-pipeline-persistenceagent created
+deployment.apps/ml-pipeline-scheduledworkflow created
+deployment.apps/ml-pipeline-ui created
+deployment.apps/cache-deployer-deployment created
+deployment.apps/ml-pipeline-visualizationserver created
+deployment.apps/mpi-operator created
+deployment.apps/mxnet-operator created
+deployment.apps/mysql created
+deployment.apps/notebook-controller-deployment created
+deployment.apps/profiles-deployment created
+deployment.apps/pytorch-operator created
+deployment.apps/seldon-controller-manager created
+deployment.apps/tf-job-operator created
+deployment.apps/workflow-controller created
+deployment.apps/kubeflow-pipelines-profile-controller created
+deployment.apps/ml-pipeline-viewer-crd created
+deployment.apps/centraldashboard created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/admission-webhook-mutating-webhook-configuration created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/seldon-mutating-webhook-configuration-kubeflow created
+validatingwebhookconfiguration.admissionregistration.k8s.io/seldon-validating-webhook-configuration-kubeflow created
+application.app.k8s.io/pytorch-operator created
+application.app.k8s.io/kubeflow-pipelines created
+application.app.k8s.io/minio created
+application.app.k8s.io/mpi-operator created
+application.app.k8s.io/mxnet-operator created
+application.app.k8s.io/katib-crds created
+application.app.k8s.io/notebook-controller-notebook-controller created
+application.app.k8s.io/aws-nvidia-device-plugin created
+application.app.k8s.io/pytorch-job-crds created
+application.app.k8s.io/katib-controller created
+application.app.k8s.io/seldon-core-operator created
+application.app.k8s.io/tf-job-crds created
+application.app.k8s.io/tf-job-operator created
+application.app.k8s.io/webhook created
+application.app.k8s.io/aws-alb-ingress-controller created
+application.app.k8s.io/argo created
+application.app.k8s.io/centraldashboard created
+application.app.k8s.io/jupyter-web-app-jupyter-web-app created
+application.app.k8s.io/profiles-profiles created
+application.app.k8s.io/mysql created
+certificate.cert-manager.io/seldon-serving-cert created
+certificate.cert-manager.io/admission-webhook-cert created
+compositecontroller.metacontroller.k8s.io/kubeflow-pipelines-profile-controller created
+destinationrule.networking.istio.io/ml-pipeline-ui created
+destinationrule.networking.istio.io/ml-pipeline-visualizationserver created
+destinationrule.networking.istio.io/ml-pipeline created
+destinationrule.networking.istio.io/ml-pipeline-mysql created
+issuer.cert-manager.io/seldon-selfsigned-issuer created
+profile.kubeflow.org/anonymous created
+servicerole.rbac.istio.io/ml-pipeline-ui created
+servicerole.rbac.istio.io/ml-pipeline-services created
+servicerole.rbac.istio.io/cache-server created
+servicerolebinding.rbac.istio.io/bind-ml-pipeline-internal created
+servicerolebinding.rbac.istio.io/bind-cache-server-admission-webhook created
+servicerolebinding.rbac.istio.io/bind-gateway-ml-pipeline-ui created
+virtualservice.networking.istio.io/profiles-kfam created
+virtualservice.networking.istio.io/ml-pipeline-ui created
+virtualservice.networking.istio.io/metadata-grpc created
+virtualservice.networking.istio.io/katib-ui created
+virtualservice.networking.istio.io/jupyter-web-app-jupyter-web-app created
+virtualservice.networking.istio.io/centraldashboard created
+virtualservice.networking.istio.io/argo-ui created
+configmap/istio-ingress-config created
+ingress.networking.k8s.io/istio-ingress created
+namespace/knative-serving created
+secret/webhook-certs created
+secret/istio-webhook-certs created
+configmap/config-tracing created
+configmap/config-domain created
+configmap/config-gc created
+configmap/config-leader-election created
+configmap/config-deployment created
+configmap/config-logging created
+configmap/config-network created
+configmap/config-observability created
+configmap/config-istio created
+configmap/config-defaults created
+configmap/config-autoscaler created
+serviceaccount/controller created
+customresourcedefinition.apiextensions.k8s.io/services.serving.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/serverlessservices.networking.internal.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/routes.serving.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/metrics.autoscaling.internal.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/ingresses.networking.internal.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/images.caching.internal.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/configurations.serving.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/certificates.networking.internal.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/podautoscalers.autoscaling.internal.knative.dev created
+customresourcedefinition.apiextensions.k8s.io/revisions.serving.knative.dev created
+clusterrole.rbac.authorization.k8s.io/knative-serving-podspecable-binding created
+clusterrole.rbac.authorization.k8s.io/knative-serving-namespaced-view created
+clusterrole.rbac.authorization.k8s.io/knative-serving-namespaced-edit created
+clusterrole.rbac.authorization.k8s.io/knative-serving-namespaced-admin created
+clusterrole.rbac.authorization.k8s.io/knative-serving-istio created
+clusterrole.rbac.authorization.k8s.io/knative-serving-core created
+clusterrole.rbac.authorization.k8s.io/knative-serving-admin created
+clusterrole.rbac.authorization.k8s.io/knative-serving-addressable-resolver created
+clusterrolebinding.rbac.authorization.k8s.io/knative-serving-controller-admin created
+service/istio-webhook created
+service/webhook created
+service/activator-service created
+service/autoscaler created
+service/controller created
+deployment.apps/istio-webhook created
+deployment.apps/webhook created
+deployment.apps/autoscaler created
+deployment.apps/networking-istio created
+deployment.apps/controller created
+deployment.apps/activator created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/webhook.istio.networking.internal.knative.dev created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/webhook.serving.knative.dev created
+validatingwebhookconfiguration.admissionregistration.k8s.io/config.webhook.istio.networking.internal.knative.dev created
+validatingwebhookconfiguration.admissionregistration.k8s.io/validation.webhook.serving.knative.dev created
+validatingwebhookconfiguration.admissionregistration.k8s.io/config.webhook.serving.knative.dev created
+application.app.k8s.io/knative-serving-crds created
+application.app.k8s.io/knative-serving-install created
+gateway.networking.istio.io/cluster-local-gateway created
+horizontalpodautoscaler.autoscaling/activator created
+image.caching.internal.knative.dev/queue-proxy created
+servicerole.rbac.istio.io/istio-service-role created
+servicerolebinding.rbac.istio.io/istio-service-role-binding created
+secret/kfserving-webhook-server-secret created
+configmap/inferenceservice-config created
+customresourcedefinition.apiextensions.k8s.io/inferenceservices.serving.kubeflow.org created
+clusterrole.rbac.authorization.k8s.io/kubeflow-kfserving-edit created
+clusterrole.rbac.authorization.k8s.io/kfserving-manager-role created
+clusterrole.rbac.authorization.k8s.io/kfserving-proxy-role created
+clusterrole.rbac.authorization.k8s.io/kubeflow-kfserving-admin created
+clusterrole.rbac.authorization.k8s.io/kubeflow-kfserving-view created
+clusterrolebinding.rbac.authorization.k8s.io/kfserving-manager-rolebinding created
+clusterrolebinding.rbac.authorization.k8s.io/kfserving-proxy-rolebinding created
+role.rbac.authorization.k8s.io/leader-election-role created
+rolebinding.rbac.authorization.k8s.io/leader-election-rolebinding created
+service/kfserving-controller-manager-metrics-service created
+service/kfserving-controller-manager-service created
+service/kfserving-webhook-server-service created
+statefulset.apps/kfserving-controller-manager created
+mutatingwebhookconfiguration.admissionregistration.k8s.io/inferenceservice.serving.kubeflow.org created
+validatingwebhookconfiguration.admissionregistration.k8s.io/inferenceservice.serving.kubeflow.org created
+application.app.k8s.io/kfserving created
+certificate.cert-manager.io/serving-cert created
+issuer.cert-manager.io/selfsigned-issuer created
+configmap/spartakus-config created
+serviceaccount/spartakus created
+clusterrole.rbac.authorization.k8s.io/spartakus created
+clusterrolebinding.rbac.authorization.k8s.io/spartakus created
+deployment.apps/spartakus-volunteer created
+application.app.k8s.io/spartakus created
+NAME                                                         READY   STATUS              RESTARTS   AGE
+pod/admission-webhook-bootstrap-stateful-set-0               1/1     Running             2          37s
+pod/admission-webhook-deployment-5cd7dc96f5-jbktv            0/1     Error               0          11s
+pod/alb-ingress-controller-667f996fbd-hnh7z                  1/1     Running             0          11s
+pod/application-controller-stateful-set-0                    1/1     Running             0          93s
+pod/argo-ui-657cf69ff5-8nhc7                                 0/1     ContainerCreating   0          12s
+pod/cache-deployer-deployment-5f4979f45-r957v                0/2     PodInitializing     0          8s
+pod/cache-server-7859fd67f5-2rqqj                            0/2     Init:0/1            0          11s
+pod/centraldashboard-86744cbb7b-8qsph                        0/1     ContainerCreating   0          5s
+pod/jupyter-web-app-deployment-c76dc4bb5-hkb4l               0/1     ContainerCreating   0          11s
+pod/katib-controller-7fcc95676b-5r2k5                        1/1     Running             0          11s
+pod/katib-db-manager-67867f5498-cw4vr                        0/1     Running             0          11s
+pod/katib-mysql-6b5d848bf5-dq6tp                             0/1     ContainerCreating   0          11s
+pod/katib-ui-65dc4cf6f5-kh75g                                1/1     Running             0          11s
+pod/kfserving-controller-manager-0                           0/2     ContainerCreating   0          3s
+pod/kubeflow-pipelines-profile-controller-797fb44db9-nx6r7   0/1     ContainerCreating   0          5s
+pod/metacontroller-0                                         1/1     Running             0          38s
+pod/metadata-db-c65f4bc75-72jg5                              0/1     ContainerCreating   0          10s
+pod/metadata-envoy-deployment-67bd5954c-gn8nj                0/1     ContainerCreating   0          10s
+pod/metadata-grpc-deployment-577c67c96f-pwz8f                0/1     ContainerCreating   0          10s
+pod/metadata-writer-756dbdd478-ff7gs                         0/2     PodInitializing     0          10s
+pod/minio-54d995c97b-jzt2l                                   0/1     ContainerCreating   0          10s
+pod/ml-pipeline-8d6749d9c-9pp45                              0/2     PodInitializing     0          9s
+pod/ml-pipeline-persistenceagent-d984c9585-pcbhb             0/2     PodInitializing     0          9s
+pod/ml-pipeline-scheduledworkflow-5ccf4c9fcc-79c8h           0/2     PodInitializing     0          9s
+pod/ml-pipeline-ui-8ccbf585c-nj97x                           0/2     PodInitializing     0          9s
+pod/ml-pipeline-viewer-crd-56c68f6c85-q4n75                  0/2     Init:0/1            0          5s
+pod/ml-pipeline-visualizationserver-7446b96877-fppmd         0/2     PodInitializing     0          8s
+pod/mpi-operator-d5bfb8489-tpwpl                             0/1     ContainerCreating   0          8s
+pod/mxnet-operator-7576d697d6-rvxmd                          0/1     ContainerCreating   0          7s
+pod/mysql-74f8f99bc8-x5jgf                                   0/2     Pending             0          7s
+pod/notebook-controller-deployment-dd4c74b47-nrbnr           0/1     ContainerCreating   0          7s
+pod/nvidia-device-plugin-daemonset-8w2vx                     0/2     PodInitializing     0          11s
+pod/nvidia-device-plugin-daemonset-96mhd                     0/2     PodInitializing     0          10s
+pod/nvidia-device-plugin-daemonset-fts9d                     0/2     PodInitializing     0          10s
+pod/nvidia-device-plugin-daemonset-wwvbm                     0/2     PodInitializing     0          10s
+pod/nvidia-device-plugin-daemonset-zlgxb                     1/2     Running             0          11s
+pod/nvidia-device-plugin-daemonset-zlztm                     0/2     PodInitializing     0          11s
+pod/profiles-deployment-65f54cb5c4-jrlkt                     0/2     ContainerCreating   0          7s
+pod/pytorch-operator-847c8d55d8-qf7g4                        0/1     ContainerCreating   0          7s
+pod/seldon-controller-manager-6bf8b45656-h26d7               0/1     ContainerCreating   0          7s
+pod/spark-operatorsparkoperator-fdfbfd99-wk7vl               1/1     Running             0          34s
+pod/spartakus-volunteer-558f8bfd47-pn8gh                     0/1     Pending             0          1s
+pod/tf-job-operator-58477797f8-gjrjb                         0/1     ContainerCreating   0          6s
+pod/workflow-controller-64fd7cffc5-xltdt                     0/1     ContainerCreating   0          6s
+
+NAME                                                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+service/admission-webhook-service                      ClusterIP   10.100.247.88    <none>        443/TCP             12s
+service/application-controller-service                 ClusterIP   10.100.198.213   <none>        443/TCP             93s
+service/argo-ui                                        NodePort    10.100.239.24    <none>        80:30389/TCP        13s
+service/cache-server                                   ClusterIP   10.100.129.23    <none>        443/TCP             13s
+service/centraldashboard                               ClusterIP   10.100.64.10     <none>        80/TCP              13s
+service/jupyter-web-app-service                        ClusterIP   10.100.67.162    <none>        80/TCP              13s
+service/katib-controller                               ClusterIP   10.100.170.4     <none>        443/TCP,8080/TCP    12s
+service/katib-db-manager                               ClusterIP   10.100.246.151   <none>        6789/TCP            13s
+service/katib-mysql                                    ClusterIP   10.100.211.227   <none>        3306/TCP            13s
+service/katib-ui                                       ClusterIP   10.100.27.77     <none>        80/TCP              13s
+service/kfserving-controller-manager-metrics-service   ClusterIP   10.100.16.163    <none>        8443/TCP            5s
+service/kfserving-controller-manager-service           ClusterIP   10.100.43.172    <none>        443/TCP             4s
+service/kfserving-webhook-server-service               ClusterIP   10.100.245.187   <none>        443/TCP             4s
+service/kubeflow-pipelines-profile-controller          ClusterIP   10.100.22.247    <none>        80/TCP              13s
+service/metadata-db                                    ClusterIP   10.100.253.131   <none>        3306/TCP            13s
+service/metadata-envoy-service                         ClusterIP   10.100.214.109   <none>        9090/TCP            13s
+service/metadata-grpc-service                          ClusterIP   10.100.145.209   <none>        8080/TCP            12s
+service/minio-service                                  ClusterIP   10.100.79.162    <none>        9000/TCP            12s
+service/ml-pipeline                                    ClusterIP   10.100.202.215   <none>        8888/TCP,8887/TCP   12s
+service/ml-pipeline-ui                                 ClusterIP   10.100.238.225   <none>        80/TCP              12s
+service/ml-pipeline-visualizationserver                ClusterIP   10.100.174.90    <none>        8888/TCP            12s
+service/mysql                                          ClusterIP   10.100.61.120    <none>        3306/TCP            12s
+service/notebook-controller-service                    ClusterIP   10.100.196.22    <none>        443/TCP             12s
+service/profiles-kfam                                  ClusterIP   10.100.216.46    <none>        8081/TCP            12s
+service/pytorch-operator                               ClusterIP   10.100.218.98    <none>        8443/TCP            12s
+service/seldon-webhook-service                         ClusterIP   10.100.160.19    <none>        443/TCP             12s
+service/tf-job-operator                                ClusterIP   10.100.172.105   <none>        8443/TCP            12s
+
+NAME                                            DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+daemonset.apps/nvidia-device-plugin-daemonset   6         6         0       6            0           <none>          12s
+
+NAME                                                    READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/admission-webhook-deployment            1/1     1            1           12s
+deployment.apps/alb-ingress-controller                  1/1     1            1           12s
+deployment.apps/argo-ui                                 0/1     1            0           12s
+deployment.apps/cache-deployer-deployment               0/1     1            0           12s
+deployment.apps/cache-server                            0/1     1            0           12s
+deployment.apps/centraldashboard                        0/1     1            0           11s
+deployment.apps/jupyter-web-app-deployment              0/1     1            0           12s
+deployment.apps/katib-controller                        1/1     1            1           12s
+deployment.apps/katib-db-manager                        0/1     1            0           12s
+deployment.apps/katib-mysql                             0/1     1            0           12s
+deployment.apps/katib-ui                                1/1     1            1           12s
+deployment.apps/kubeflow-pipelines-profile-controller   0/1     1            0           12s
+deployment.apps/metadata-db                             0/1     1            0           12s
+deployment.apps/metadata-envoy-deployment               0/1     1            0           12s
+deployment.apps/metadata-grpc-deployment                0/1     1            0           12s
+deployment.apps/metadata-writer                         0/1     1            0           12s
+deployment.apps/minio                                   0/1     1            0           12s
+deployment.apps/ml-pipeline                             0/1     1            0           12s
+deployment.apps/ml-pipeline-persistenceagent            0/1     1            0           12s
+deployment.apps/ml-pipeline-scheduledworkflow           0/1     1            0           12s
+deployment.apps/ml-pipeline-ui                          0/1     1            0           12s
+deployment.apps/ml-pipeline-viewer-crd                  0/1     1            0           11s
+deployment.apps/ml-pipeline-visualizationserver         0/1     1            0           12s
+deployment.apps/mpi-operator                            0/1     1            0           12s
+deployment.apps/mxnet-operator                          0/1     1            0           12s
+deployment.apps/mysql                                   0/1     1            0           12s
+deployment.apps/notebook-controller-deployment          0/1     1            0           12s
+deployment.apps/profiles-deployment                     0/1     1            0           12s
+deployment.apps/pytorch-operator                        0/1     1            0           12s
+deployment.apps/seldon-controller-manager               0/1     1            0           12s
+deployment.apps/spark-operatorsparkoperator             1/1     1            1           34s
+deployment.apps/spartakus-volunteer                     0/1     1            0           2s
+deployment.apps/tf-job-operator                         0/1     1            0           12s
+deployment.apps/workflow-controller                     0/1     1            0           12s
+
+NAME                                                               DESIRED   CURRENT   READY   AGE
+replicaset.apps/admission-webhook-deployment-5cd7dc96f5            1         1         1       11s
+replicaset.apps/alb-ingress-controller-667f996fbd                  1         1         1       12s
+replicaset.apps/argo-ui-657cf69ff5                                 1         1         0       12s
+replicaset.apps/cache-deployer-deployment-5f4979f45                1         1         0       10s
+replicaset.apps/cache-server-7859fd67f5                            1         1         0       12s
+replicaset.apps/centraldashboard-86744cbb7b                        1         1         0       8s
+replicaset.apps/jupyter-web-app-deployment-c76dc4bb5               1         1         0       12s
+replicaset.apps/katib-controller-7fcc95676b                        1         1         1       12s
+replicaset.apps/katib-db-manager-67867f5498                        1         1         0       12s
+replicaset.apps/katib-mysql-6b5d848bf5                             1         1         0       11s
+replicaset.apps/katib-ui-65dc4cf6f5                                1         1         1       11s
+replicaset.apps/kubeflow-pipelines-profile-controller-797fb44db9   1         1         0       8s
+replicaset.apps/metadata-db-c65f4bc75                              1         1         0       11s
+replicaset.apps/metadata-envoy-deployment-67bd5954c                1         1         0       11s
+replicaset.apps/metadata-grpc-deployment-577c67c96f                1         1         0       11s
+replicaset.apps/metadata-writer-756dbdd478                         1         1         0       11s
+replicaset.apps/minio-54d995c97b                                   1         1         0       11s
+replicaset.apps/ml-pipeline-8d6749d9c                              1         1         0       11s
+replicaset.apps/ml-pipeline-persistenceagent-d984c9585             1         1         0       10s
+replicaset.apps/ml-pipeline-scheduledworkflow-5ccf4c9fcc           1         1         0       10s
+replicaset.apps/ml-pipeline-ui-8ccbf585c                           1         1         0       10s
+replicaset.apps/ml-pipeline-viewer-crd-56c68f6c85                  1         1         0       8s
+replicaset.apps/ml-pipeline-visualizationserver-7446b96877         1         1         0       10s
+replicaset.apps/mpi-operator-d5bfb8489                             1         1         0       10s
+replicaset.apps/mxnet-operator-7576d697d6                          1         1         0       9s
+replicaset.apps/mysql-74f8f99bc8                                   1         1         0       9s
+replicaset.apps/notebook-controller-deployment-dd4c74b47           1         1         0       9s
+replicaset.apps/profiles-deployment-65f54cb5c4                     1         1         0       9s
+replicaset.apps/pytorch-operator-847c8d55d8                        1         1         0       9s
+replicaset.apps/seldon-controller-manager-6bf8b45656               1         1         0       8s
+replicaset.apps/spark-operatorsparkoperator-fdfbfd99               1         1         1       34s
+replicaset.apps/spartakus-volunteer-558f8bfd47                     1         1         0       1s
+replicaset.apps/tf-job-operator-58477797f8                         1         1         0       8s
+replicaset.apps/workflow-controller-64fd7cffc5                     1         1         0       8s
+
+NAME                                                        READY   AGE
+statefulset.apps/admission-webhook-bootstrap-stateful-set   1/1     37s
+statefulset.apps/application-controller-stateful-set        1/1     93s
+statefulset.apps/kfserving-controller-manager               0/1     4s
+statefulset.apps/metacontroller                             1/1     38s
