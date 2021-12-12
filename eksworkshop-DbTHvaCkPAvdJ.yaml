@@ -3,7 +3,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eksworkshop-YKtHnj8R17kYM
+  name: eksworkshop-DbTHvaCkPAvdJ
   region: us-west-2
 
 managedNodeGroups:
@@ -14,4 +14,4 @@ managedNodeGroups:
       albIngress: true
 
 secretsEncryption:
-  keyARN: arn:aws:kms:us-west-2:878687028155:key/1cfbc727-37b6-4399-b3a6-5cecb7aadaf6
+  keyARN: arn:aws:kms:us-west-2:878687028155:key/fdfddb22-e0fa-435a-aab1-74f32eb5bdd6
