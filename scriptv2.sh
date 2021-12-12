@@ -17,7 +17,7 @@ eksctl scale nodegroup --cluster ${AWS_CLUSTER_NAME} --name $NODEGROUP_NAME --no
 
 #curl --silent --location "https://github.com/kubeflow/kfctl/releases/download/v1.0.1/kfctl_v1.0.1-0-gf3edb9b_linux.tar.gz" | tar xz -C /tmp
 
-curl --silent --location "https://kubeflow-aws.s3-us-west-2.amazonaws.com/kfctl/linux/kfctl_v1.0.2-1-g93e95e1_linux.tar.gz" | tar xz -C /tmp
+#curl --silent --location "https://kubeflow-aws.s3-us-west-2.amazonaws.com/kfctl/linux/kfctl_v1.0.2-1-g93e95e1_linux.tar.gz" | tar xz -C /tmp
 
 sudo cp -v /tmp/kfctl /usr/local/bin
 
