@@ -13,11 +13,16 @@ export AWS_CLUSTER_NAME=eksworkshop-$CLUSTER_RAND
 aws configure set default.region ${AWS_REGION}
 #aws configure set aws_output json
 
+#install kubectl
+
 #sudo curl --silent --location -o /usr/local/bin/kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl
 sudo curl --silent --location -o /usr/local/bin/kubectl "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-
 sudo chmod +x /usr/local/bin/kubectl
-sudo curl --silent --location -o /usr/local/bin/aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.15.10/2020-02-22/bin/linux/amd64/aws-iam-authenticator
+
+#install aws-iam-authenticator
+#curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
+
+sudo curl --silent --location -o /usr/local/bin/aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
 sudo chmod +x /usr/local/bin/aws-iam-authenticator
 
 /usr/local/bin/kubectl completion bash >>  ~/.bash_completion
