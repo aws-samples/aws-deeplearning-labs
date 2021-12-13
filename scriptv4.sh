@@ -2,13 +2,13 @@
 # Setup Cloud9 on our Jump Server
 
 #Install Node.Js for Root
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 source ~/.nvm/nvm.sh
 source ~/.bashrc
 nvm install node
 
 #Install Node.JS for ec2-user
-/bin/su -c "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash" - ec2-user
+/bin/su -c "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash" - ec2-user
 /bin/su -c "source ~/.nvm/nvm.sh" - ec2-user
 /bin/su -c "source ~/.bashrc" - ec2-user
 /bin/su -c "nvm install node" - ec2-user
