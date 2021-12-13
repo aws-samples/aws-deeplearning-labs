@@ -1,15 +1,14 @@
 ## eks-kubeflow-cloudformation-quick-start (Update 13th December 2021)
 
-1. Update KubeFlow to 1.2 running on EKS 1.18
-2. Fix Sagemaker Operators Install issues for regions other than us-east-2. 
-3. Modified Instructions.
+- [x] Update KubeFlow to 1.2 running on EKS 1.18 :tada:
+- [x] Fix Sagemaker Operators Install issues for regions other than us-east-2. :tada:
 
 ## Why?
 
 For people who wish to start using KubeFlow and Sagemaker operators for Kubernetes without spending any time on installation of underlying infrastructure and tools can use the CloudFormation in this git repo. The scripts in this git repo are referenced from -
 
-1. https://eksworkshop.com/ 
-2. https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_operators_for_kubernetes.html. 
+  - https://eksworkshop.com/ 
+  - https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_operators_for_kubernetes.html. 
 
 ## Instructions
 
@@ -23,9 +22,9 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 2) The Cloudformation will run for about 20-25 minutes and will setup
 
-- A Linux Jump Box with eksctl and kubectl.
-- EKS, KubeFlow and Sagemaker operators for k8s.
-- Install Cloud9 components
+        - A Linux Jump Box with eksctl and kubectl.
+        - EKS, KubeFlow and Sagemaker operators for k8s.
+        - Install Cloud9 components
 
 You can watch the installation process by logging into the Linux Jump Server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log. Go to Cloudformation service in AWS Console and check the stack which you just created-
 
