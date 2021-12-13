@@ -88,21 +88,9 @@ From Cloud9 console, we can run eksctl and kubectl commands and also open Kubefl
 
 On Cloud9, open a new terminal and run command-
 
-kubectl port-forward svc/istio-ingressgateway -n istio-system 8080:80
+kubectl get ingress -n istio-system
 
-Keep this command running and continue your work in other tabs/terminal within Cloud9
-
-![Cloud9-6](/images/Cloud9-6.png)
-
-You can open KubeFlow dashboard by selecting Preview --> Preview running applications.
-
-![Cloud9-7](/images/Cloud9-7.png)
-
-![Cloud9-8](/images/Cloud9-8.png)
-
-![Cloud9-9](/images/Cloud9-9.png)
-
-![Cloud9-10](/images/Cloud9-10.png)
+Youc can use the ingress URL to authenticate and login to Kubeflow.
 
 
 # Deletion/Roll-Back steps-
