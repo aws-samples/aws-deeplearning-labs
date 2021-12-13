@@ -90,7 +90,7 @@ On Cloud9, open a new terminal and run command-
 
 kubectl get ingress -n istio-system
 
-Youc can use the ingress URL to authenticate and login to Kubeflow.
+You can use the ingress URL to authenticate and login to Kubeflow.
 
 
 # Deletion/Roll-Back steps-
