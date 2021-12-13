@@ -18,5 +18,5 @@ sudo yum -y groupinstall "Development Tools"
 
 # Install Cloud9 with Ec2-user
 
-/bin/su -c "curl -L https://raw.githubusercontent.com/c9/install/master/install.sh | bash" - ec2-user
-/bin/su -c "wget -O - https://raw.githubusercontent.com/c9/install/master/install.sh | bash" - ec2-user
+sudo /bin/su -c "curl -L https://raw.githubusercontent.com/c9/install/master/install.sh | bash" - ec2-user
+sudo /bin/su -c "wget -O - https://raw.githubusercontent.com/c9/install/master/install.sh | bash" - ec2-user
