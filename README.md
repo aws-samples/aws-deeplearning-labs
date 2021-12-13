@@ -11,8 +11,6 @@ For people who wish to start using KubeFlow and Sagemaker operators for Kubernet
 1. https://eksworkshop.com/ 
 2. https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_operators_for_kubernetes.html. 
 
-Please check these links if you wish to see step by step process.
-
 ## Instructions
 
 1) Clone the git repo locally on your workstation and execute the Cloudformation template (we assume that you have already setup awscli)
@@ -23,16 +21,13 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 ![ScreenShot1](/images/ScreenShot1.png)
 
-You can also run the Cloudformation from AWS Console.
-
 2) The Cloudformation will run for about 20-25 minutes and will setup
-        a) A Linux Jump Box with eksctl and kubectl
-        b) EKS, KubeFlow and Sagemaker operators for k8s.
-        c) install Cloud9 components
 
-You can watch the installation process by logging into the Linux Jump Server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log.
+- A Linux Jump Box with eksctl and kubectl.
+- EKS, KubeFlow and Sagemaker operators for k8s.
+- Install Cloud9 components
 
-Go to Cloudformation service in AWS Console and check the stack which you just created-
+You can watch the installation process by logging into the Linux Jump Server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log. Go to Cloudformation service in AWS Console and check the stack which you just created-
 
 ![Image2](/images/Image2.png)
 
