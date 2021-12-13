@@ -40,11 +40,13 @@ Select the WebServerInstance to go to the Linux Jump Box in EC2 console.
 
 Hit Connect with EC2 Instance Connect. This will open SSH shell in browser. If you are not able to open EC2 instance connect for some reason you can also choose Session Manager. We are showing screenshots from EC2 instance connect.
 
-![Image5](/images/Image5.png)
+![Cloud9-6](/images/Cloud9-6.png)
 
 Once connected to the Jump Box you can watch the installation of EKS, KubeFlow, Sagemaker operators and Cloud9 at /var/log/cloud-init-output.log
 
-![tail-cloud-init](/images/tail-cloud-init.png)
+![Cloud9-7](/images/Cloud9-7.png)
+
+![Cloud9-8](/images/Cloud9-8.png)
 
 Wait for the installation to complete (should take approx 20-25 minutes). You will see below message at the end of bootstrapping.
 
