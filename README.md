@@ -17,7 +17,9 @@ Please check these links if you wish to see step by step process.
 
 1) Clone the git repo locally on your workstation and execute the Cloudformation template (we assume that you have already setup awscli)
 
+```shell
 aws cloudformation create-stack --stack-name myteststack --template-body file://cfv1.json --capabilities CAPABILITY_IAM
+```
 
 ![ScreenShot1](/images/ScreenShot1.png)
 
@@ -95,7 +97,9 @@ From Cloud9 console, we can run eksctl and kubectl commands and also open Kubefl
 
 On Cloud9, open a new terminal and run command-
 
+```shell
 kubectl get ingress -n istio-system
+```
 
 You can use the ingress URL to authenticate and login to Kubeflow.
 
