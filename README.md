@@ -90,7 +90,7 @@ kubectl get ingress -n istio-system
 You can use the ingress URL to authenticate and login to Kubeflow.
 
 
-### Deletion/Roll-Back steps-
+### Deleting the AWS resources
 
 1) eksctl delete cluster
 2) Delete IAM OIDC
