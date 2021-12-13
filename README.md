@@ -34,11 +34,11 @@ Go to resources tab in the CF-
 
 ![Image3](/images/Image3.png)
 
-Select the WebServerInstance to go to the Linux Jump Box in EC2 console.
+Select the WebServerInstance to go to the Linux Jump Box in EC2 console and select Connect.
 
-![Image4](/images/Image4.png)
+![Cloud9-9.png](/images/Cloud9-9.png)
 
-Hit Connect with EC2 Instance Connect. This will open SSH shell in browser. If you are not able to open EC2 instance connect for some reason you can also choose Session Manager. We are showing screenshots from EC2 instance connect.
+Select "Session Manager" and then click on "Connect". This will open SSH shell in browser.
 
 ![Cloud9-6](/images/Cloud9-6.png)
 
