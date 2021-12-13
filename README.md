@@ -26,7 +26,7 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
   * Deploy EKS, KubeFlow and Sagemaker operators for k8s.
   * Deploy Cloud9.
 
-You can watch the installation process by logging into the jump server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log. Go to Cloudformation service in AWS Console and check the stack which you just created-
+Go to Cloudformation service in AWS Console and check the stack which you just created-
 
 ![Image2](/images/Image2.png)
 
@@ -42,7 +42,7 @@ Select "Session Manager" and then click on "Connect". This will open SSH shell i
 
 ![Cloud9-6](/images/Cloud9-6.png)
 
-Once connected to the Jump Box you can watch the installation of EKS, KubeFlow, Sagemaker operators and Cloud9 at /var/log/cloud-init-output.log
+You can watch the installation process by logging into the jump server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log. 
 
 ![Cloud9-7](/images/Cloud9-7.png)
 
@@ -97,6 +97,7 @@ You can use the ingress URL to authenticate and login to Kubeflow.
 3) Delete IAM Roles.
 4) Delete/Disable the AWS KMS Custom Key (optional)
 5) Delete the Cloudformation templates . There will be total three templates ( 2 from eksctl and 1 which you created at the beginning of the lab).
+6) Delete any AWS resources manually if Cloudformation template is not able to remove them.
 
 ### Security
 
