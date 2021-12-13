@@ -44,7 +44,7 @@
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
              "#!/bin/bash -xe\n",
              "yum install -y aws-cfn-bootstrap git\n",
-             "cd /home/ec2-user && git clone https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start.git\n",
+             "cd /home/ec2-user && git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start.git\n",
              "cd /home/ec2-user/eks-kubeflow-cloudformation-quick-start\n",
              "./scriptv1.sh\n",
              "./scriptv2.sh\n",
