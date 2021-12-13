@@ -2,9 +2,9 @@
 
 ## Update 13th December 2021
 
-[] Update KubeFlow to 1.2 running on EKS 1.18
-[] Fix Sagemaker Operators Install issues for regions other than us-east-2. 
-[] Modified Instructions.
+1. Update KubeFlow to 1.2 running on EKS 1.18
+2. Fix Sagemaker Operators Install issues for regions other than us-east-2. 
+3. Modified Instructions.
 
 ## Why?
 
