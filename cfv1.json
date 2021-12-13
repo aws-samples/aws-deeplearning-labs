@@ -48,10 +48,8 @@
              "cd /home/ec2-user/eks-kubeflow-cloudformation-quick-start\n",
              "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv1.sh\n",
              "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv2.sh\n",
-             "#/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv3.sh\n",
-             "#/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv4.sh\n",
-             "#./scriptv3.sh\n",
-             "#./scriptv4.sh\n"
+             "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv3.sh\n",
+             "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv4.sh\n"
         ]]}}
       },
       "CreationPolicy" : {
