@@ -1,12 +1,12 @@
 ## eks-kubeflow-cloudformation-quick-start
 
-# Why?
+### Why?
 
 For people who wish to start using KubeFlow and Sagemaker operators for Kubernetes without spending any time on installation of underlying infrastructure and tools can use the CloudFormation in this git repo.
 
 The scripts in this git repo are referenced from https://eksworkshop.com/ and https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_operators_for_kubernetes.html. Please check these links if you wish to see step by step process.
 
-# Steps#
+### Steps#
 
 1) Clone the git repo locally on your workstation and execute the Cloudformation template (we assume that you have already setup awscli)
 
@@ -93,7 +93,7 @@ kubectl get ingress -n istio-system
 You can use the ingress URL to authenticate and login to Kubeflow.
 
 
-# Deletion/Roll-Back steps-
+### Deletion/Roll-Back steps-
 
 1) eksctl delete cluster
 2) Delete IAM OIDC
@@ -101,10 +101,10 @@ You can use the ingress URL to authenticate and login to Kubeflow.
 4) Delete/Disable the AWS KMS Custom Key (optional)
 5) Delete the Cloudformation templates . There will be total three templates ( 2 from eksctl and 1 which you created at the beginning of the lab).
 
-## Security
+### Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
-## License
+### License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
