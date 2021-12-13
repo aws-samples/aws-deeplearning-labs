@@ -30,7 +30,7 @@ Go to Cloudformation service in AWS Console and check the stack which you just c
 
 ![Image2](/images/Image2.png)
 
-Go to resources tab in the CF-
+Go to resources tab in the Cloudformation
 
 ![Image3](/images/Image3.png)
 
@@ -42,7 +42,13 @@ Select "Session Manager" and then click on "Connect". This will open SSH shell i
 
 ![Cloud9-6](/images/Cloud9-6.png)
 
-You can watch the installation process by logging into the jump server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log. 
+Watch the installation process by running following commands.
+
+```
+sudo su - 
+cd /var/log
+tail -f cloud-init-output.log
+```
 
 ![Cloud9-7](/images/Cloud9-7.png)
 
