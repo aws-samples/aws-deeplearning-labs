@@ -1,4 +1,4 @@
-## eks-kubeflow-cloudformation-quick-start (Update 13th December 2021)
+## EKS Kubeflow Quickstart (Update 12/13/2021)
 
 - [x] Update KubeFlow to 1.2 running on EKS 1.18 :tada:
 - [x] Fix Sagemaker Operators Install issues for regions other than us-east-2. :tada:
