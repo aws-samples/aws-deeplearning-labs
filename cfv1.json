@@ -45,10 +45,10 @@
              "#!/bin/bash -xe\n",
              "yum install -y aws-cfn-bootstrap git\n",
              "cd /home/ec2-user && git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start.git\n",
-             "sudo -u ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv1.sh\n",
-             "sudo -u ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv2.sh\n",
-             "sudo -u ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv3.sh\n",
-             "sudo -u ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv4.sh\n"
+             "./scriptv1.sh\n",
+             "./scriptv2.sh\n",
+             "./scriptv3.sh\n",
+             "./scriptv4.sh\n"
         ]]}}
       },
       "CreationPolicy" : {
