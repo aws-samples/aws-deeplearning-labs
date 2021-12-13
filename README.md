@@ -1,6 +1,4 @@
-## eks-kubeflow-cloudformation-quick-start
-
-## Update 13th December 2021
+## eks-kubeflow-cloudformation-quick-start (Update 13th December 2021)
 
 1. Update KubeFlow to 1.2 running on EKS 1.18
 2. Fix Sagemaker Operators Install issues for regions other than us-east-2. 
@@ -8,9 +6,12 @@
 
 ## Why?
 
-For people who wish to start using KubeFlow and Sagemaker operators for Kubernetes without spending any time on installation of underlying infrastructure and tools can use the CloudFormation in this git repo.
+For people who wish to start using KubeFlow and Sagemaker operators for Kubernetes without spending any time on installation of underlying infrastructure and tools can use the CloudFormation in this git repo. The scripts in this git repo are referenced from -
 
-The scripts in this git repo are referenced from https://eksworkshop.com/ and https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_operators_for_kubernetes.html. Please check these links if you wish to see step by step process.
+1. https://eksworkshop.com/ 
+2. https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_operators_for_kubernetes.html. 
+
+Please check these links if you wish to see step by step process.
 
 ## Instructions
 
