@@ -20,13 +20,13 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 ![ScreenShot1](/images/ScreenShot1.png)
 
-2) The Cloudformation will run for about 20-25 minutes and will setup
+2) The Cloudformation will run for about 20-25 minutes and will
 
-  * A Linux Jump Box with eksctl and kubectl.
-  * EKS, KubeFlow and Sagemaker operators for k8s.
-  * Install Cloud9 components
+  * Setup a Linux Jump Box with eksctl and kubectl.
+  * Deploy EKS, KubeFlow and Sagemaker operators for k8s.
+  * Deploy Cloud9.
 
-You can watch the installation process by logging into the Linux Jump Server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log. Go to Cloudformation service in AWS Console and check the stack which you just created-
+You can watch the installation process by logging into the jump server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log. Go to Cloudformation service in AWS Console and check the stack which you just created-
 
 ![Image2](/images/Image2.png)
 
@@ -78,16 +78,6 @@ Once the SSH key is copied to authorized_keys file, go back to the Cloud9 screen
 You should see Cloud9 console in a few moments.
 
 ![Cloud9-1](/images/Cloud9-1.png)
-
-From Cloud9 console, we can run eksctl and kubectl commands and also open Kubeflow dashboard.
-
-![Cloud9-2](/images/Cloud9-2.png)
-
-![Cloud9-3](/images/Cloud9-3.png)
-
-![Cloud9-4](/images/Cloud9-4.png)
-
-![Cloud9-5](/images/Cloud9-5.png)
 
 On Cloud9, open a new terminal and run command-
 
