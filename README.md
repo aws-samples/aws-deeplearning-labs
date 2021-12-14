@@ -1,110 +1,157 @@
-## eks-kubeflow-cloudformation-quick-start
+## EKS Kubeflow Quickstart (Update 12/13/2021)
 
-# Why?
+- [x] Update KubeFlow to 1.2 running on EKS 1.18 :rocket:
+- [x] Fix Sagemaker Operators Install issues for regions other than us-east-2. :rocket:
 
-For people who wish to start using KubeFlow and Sagemaker operators for Kubernetes without spending any time on installation of underlying infrastructure and tools can use the CloudFormation in this git repo.
+### Why?
 
-The scripts in this git repo are referenced from https://eksworkshop.com/ and https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_operators_for_kubernetes.html. Please check these links if you wish to see step by step process.
+For people who wish to start using KubeFlow and Sagemaker operators for Kubernetes without spending any time on installation of underlying infrastructure and tools can use the CloudFormation in this git repo. The scripts in this git repo are referenced from -
 
-# Steps#
+  - https://eksworkshop.com/ 
+  - https://sagemaker.readthedocs.io/en/stable/amazon_sagemaker_operators_for_kubernetes.html. 
+
+### Instructions
 
 1) Clone the git repo locally on your workstation and execute the Cloudformation template (we assume that you have already setup awscli)
 
+```shell
 aws cloudformation create-stack --stack-name myteststack --template-body file://cfv1.json --capabilities CAPABILITY_IAM
+```
 
 ![ScreenShot1](/images/ScreenShot1.png)
 
-You can also run the Cloudformation from AWS Console.
+2) The Cloudformation will perform below tasks
 
-2) The Cloudformation will run for about 20-25 minutes and will setup
-        a) A Linux Jump Box with eksctl and kubectl
-        b) EKS, KubeFlow and Sagemaker operators for k8s.
-        c) install Cloud9 components
-
-You can watch the installation process by logging into the Linux Jump Server (using EC2 instance connect) and tailing the log file at /var/log/cloud-init-output.log.
+  * Setup a Linux Jump Box with eksctl and kubectl.
+  * Deploy EKS, KubeFlow and Sagemaker operators for k8s.
+  * Deploy Cloud9.
 
 Go to Cloudformation service in AWS Console and check the stack which you just created-
 
 ![Image2](/images/Image2.png)
 
-Go to resources tab in the CF-
+Go to resources tab in the Cloudformation
 
 ![Image3](/images/Image3.png)
 
-Select the WebServerInstance to go to the Linux Jump Box in EC2 console.
+Select the WebServerInstance to go to the Linux Jump Box in EC2 console and select Connect.
 
-![Image4](/images/Image4.png)
+![Cloud9-9.png](/images/Cloud9-9.png)
 
-Hit Connect with EC2 Instance Connect. This will open SSH shell in browser. If you are not able to open EC2 instance connect for some reason you can also choose Session Manager. We are showing screenshots from EC2 instance connect.
+Select "Session Manager" and then click on "Connect". This will open SSH shell in browser.
 
-![Image5](/images/Image5.png)
+![Cloud9-6](/images/Cloud9-6.png)
 
-Once connected to the Jump Box you can watch the installation of EKS, KubeFlow, Sagemaker operators and Cloud9 at /var/log/cloud-init-output.log
+Watch the installation process by running following commands.
 
-![tail-cloud-init](/images/tail-cloud-init.png)
+```
+sudo su - 
+cd /var/log
+tail -f cloud-init-output.log
+```
 
-Wait for the installation to complete (should take approx 20-25 minutes). You will see below message at the end of bootstrapping.
+![Cloud9-7](/images/Cloud9-7.png)
 
-![Cloud-Init-Finish](/images/Cloud-Init-Finish.png)
+![Cloud9-8](/images/Cloud9-8.png)
 
-3) Connect to the Linux Jump Box from Cloud9 for accessing Kubeflow dashboard.
+Wait for the installation to complete (should take approx. 30-35 minutes). You will see below message after all the scripts have executed.
+
+![session-manager-cloud-init](/images/session-manager-cloud-init.png)
+
+
+## Accessing EKS and Kubeflow from Session Manager.
+
+You can check status of your EKS cluster, SageMaker operators and KubeFlow dashboard from the "Session Manager" console. Switch to ec2-user and run below commands and see their respective outputs.
+
+```
+kubectl -n sagemaker-k8s-operator-system get pods
+```
+
+![session-manager-sm-operators](/images/session-manager-sm-operators.png)
+
+```
+kubectl get nodes
+```
+
+![session-manager-eks-nodes](/images/session-manager-eks-nodes.png)
+
+```
+kubectl get pods -n kubeflow
+```
+
+![session-manager-eks-kubeflow-pods](/images/session-manager-eks-kubeflow-pods.png)
+
+```
+kubectl get ingress -n istio-system
+```
+
+![session-manager-eks-ingress-kubeflow](/images/session-manager-eks-ingress-kubeflow.png)
+
+Copy the URL under address open it on browser on your workstation.
+
+#### For the purposes of this demo, our installation uses default passwords as mentioned at https://v1-4-branch.kubeflow.org/docs/distributions/aws/deploy/install-kubeflow/#understanding-the-deployment-process. Please make sure you are changing the password for admin or create a new user.
+
+![accessing-eks-ingress-kubeflow-browser](/images/accessing-eks-ingress-kubeflow-browser.png)
+
+Accessing the Kubeflow dashboard.
+
+![kubeflow-screenshot-1](/images/kubeflow-screenshot-1.png)
+
+![kubeflow-screenshot-2](/images/kubeflow-screenshot-2.png)
+
+
+## (Optional) Using Cloud9 for accessing EKS, SageMaker Operators and Kubeflow.
+
+In case you wish to use AWS Cloud9 IDE to access your EKS cluster, follow below steps. 
 
 Open Cloud9 Console and create a new environment.
 
-![Create-Cloud-9](/images/Create-Cloud-9.png)
+![cloud9-setup-1](/images/cloud9-setup-1.png)
 
 Give Name and Description-
 
-![Cloud9-Screenshot2](/images/Cloud9-Screenshot2.png)
+![cloud9-setup-2](/images/cloud9-setup-2.png)
 
 In next screen choose, "Connect and run in remote server" and Enter Public DNS of the Linux Jump Server and Port as 22.
 
-![Cloud9-Screenshot3](/images/Cloud9-Screenshot3.png)
+![cloud9-setup-4](/images/cloud9-setup-4.png)
 
-Before moving to next screen, we need to copy the Cloud9 public SSH key into our Linux jump server. Click on "Copy Key to Clipboard"
-and go SSH console of Linux Jump Server and update the file at /home/ec2-user/.ssh/authorized_keys.
+Before moving to next screen, we need to copy the Cloud9 public SSH key into our Linux jump server. Click on "Copy Key to Clipboard" and go SSH console of Linux Jump Server and update the file at /home/ec2-user/.ssh/authorized_keys.
 
-![LinuxServer1](/images/LinuxServer1.png)
+![cloud9-setup-5](/images/cloud9-setup-5.png)
 
-![LinuxServer2](/images/LinuxServer2.png)
-
-![LinuxServer3](/images/LinuxServer3.png)
+![cloud9-setup-6](/images/cloud9-setup-6.png)
 
 Once the SSH key is copied to authorized_keys file, go back to the Cloud9 screen and complete creating the environment.
 
+![cloud9-setup-7](/images/cloud9-setup-7.png)
+
 You should see Cloud9 console in a few moments.
 
-![Cloud9-1](/images/Cloud9-1.png)
+![cloud9-setup-7](/images/cloud9-setup-7.png)
 
-From Cloud9 console, we can run eksctl and kubectl commands and also open Kubeflow dashboard.
+![cloud9-setup-8](/images/cloud9-setup-8.png)
 
-![Cloud9-2](/images/Cloud9-2.png)
+![cloud9-setup-9](/images/cloud9-setup-9.png)
 
-![Cloud9-3](/images/Cloud9-3.png)
+![cloud9-setup-10](/images/cloud9-setup-10.png)
 
-![Cloud9-4](/images/Cloud9-4.png)
-
-![Cloud9-5](/images/Cloud9-5.png)
-
-On Cloud9, open a new terminal and run command-
-
-kubectl get ingress -n istio-system
-
-You can use the ingress URL to authenticate and login to Kubeflow.
+![cloud9-setup-11](/images/cloud9-setup-11.png)
 
 
-# Deletion/Roll-Back steps-
+## Deleting the AWS resources
 
 1) eksctl delete cluster
 2) Delete IAM OIDC
 3) Delete IAM Roles.
 4) Delete/Disable the AWS KMS Custom Key (optional)
 5) Delete the Cloudformation templates . There will be total three templates ( 2 from eksctl and 1 which you created at the beginning of the lab).
+6) Delete any AWS resources manually if Cloudformation template is not able to remove them.
 
-## Security
+### Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
-## License
+### License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
