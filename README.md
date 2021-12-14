@@ -59,25 +59,45 @@ Wait for the installation to complete (should take approx. 30-35 minutes). You w
 ![session-manager-cloud-init](/images/session-manager-cloud-init.png)
 
 
-3) You can check status of your EKS cluster, SageMaker operators and KubeFlow dashboard from the "Session Manager" console.
+## Accessing EKS and Kubeflow from Session Manager.
 
+You can check status of your EKS cluster, SageMaker operators and KubeFlow dashboard from the "Session Manager" console.
 
+```
+kubectl -n sagemaker-k8s-operator-system get pods
+```
 
 ![session-manager-sm-operators](/images/session-manager-sm-operators.png)
 
+```
+kubectl get nodes
+```
+
 ![session-manager-eks-nodes](/images/session-manager-eks-nodes.png)
+
+```
+kubectl get pods -n kubeflow
+```
 
 ![session-manager-eks-kubeflow-pods](/images/session-manager-eks-kubeflow-pods.png)
 
+```
+kubectl get ingress -n istio-system
+```
+
 ![session-manager-eks-ingress-kubeflow](/images/session-manager-eks-ingress-kubeflow.png)
 
+Copy the URL under address open it on browser on your workstation.
+
+#### For the purposes of this demo, our installation uses default passwords as mentioned at link. Please make sure you are changing the password for admin or create a new user.
+
 ![accessing-eks-ingress-kubeflow-browser](/images/accessing-eks-ingress-kubeflow-browser.png)
+
+Accessing the Kubeflow dashboard.
 
 ![kubeflow-screenshot-1](/images/kubeflow-screenshot-1.png)
 
 ![kubeflow-screenshot-2](/images/kubeflow-screenshot-2.png)
-
-
 
 
 ## (Optional) Using Cloud9 for accessing EKS, SageMaker Operators and Kubeflow.
