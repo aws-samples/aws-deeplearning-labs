@@ -89,7 +89,7 @@ kubectl get ingress -n istio-system
 
 Copy the URL under address open it on browser on your workstation.
 
-#### For the purposes of this demo, our installation uses default passwords as mentioned at link. Please make sure you are changing the password for admin or create a new user.
+#### For the purposes of this demo, our installation uses default passwords as mentioned at https://v1-4-branch.kubeflow.org/docs/distributions/aws/deploy/install-kubeflow/#understanding-the-deployment-process. Please make sure you are changing the password for admin or create a new user.
 
 ![accessing-eks-ingress-kubeflow-browser](/images/accessing-eks-ingress-kubeflow-browser.png)
 
