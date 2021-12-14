@@ -61,7 +61,7 @@ Wait for the installation to complete (should take approx. 30-35 minutes). You w
 
 ## Accessing EKS and Kubeflow from Session Manager.
 
-You can check status of your EKS cluster, SageMaker operators and KubeFlow dashboard from the "Session Manager" console.
+You can check status of your EKS cluster, SageMaker operators and KubeFlow dashboard from the "Session Manager" console. Switch to ec2-user and run below commands and see their respective outputs.
 
 ```
 kubectl -n sagemaker-k8s-operator-system get pods
@@ -106,38 +106,37 @@ In case you wish to use AWS Cloud9 IDE to access your EKS cluster, follow below 
 
 Open Cloud9 Console and create a new environment.
 
-![Create-Cloud-9](/images/Create-Cloud-9.png)
+![cloud9-setup-1](/images/cloud9-setup-1.png)
 
 Give Name and Description-
 
-![Cloud9-Screenshot2](/images/Cloud9-Screenshot2.png)
+![cloud9-setup-2](/images/cloud9-setup-2.png)
 
 In next screen choose, "Connect and run in remote server" and Enter Public DNS of the Linux Jump Server and Port as 22.
 
-![Cloud9-Screenshot3](/images/Cloud9-Screenshot3.png)
+![cloud9-setup-4](/images/cloud9-setup-4.png)
 
-Before moving to next screen, we need to copy the Cloud9 public SSH key into our Linux jump server. Click on "Copy Key to Clipboard"
-and go SSH console of Linux Jump Server and update the file at /home/ec2-user/.ssh/authorized_keys.
+Before moving to next screen, we need to copy the Cloud9 public SSH key into our Linux jump server. Click on "Copy Key to Clipboard" and go SSH console of Linux Jump Server and update the file at /home/ec2-user/.ssh/authorized_keys.
 
-![LinuxServer1](/images/LinuxServer1.png)
+![cloud9-setup-5](/images/cloud9-setup-5.png)
 
-![LinuxServer2](/images/LinuxServer2.png)
-
-![LinuxServer3](/images/LinuxServer3.png)
+![cloud9-setup-6](/images/cloud9-setup-6.png)
 
 Once the SSH key is copied to authorized_keys file, go back to the Cloud9 screen and complete creating the environment.
 
+![cloud9-setup-7](/images/cloud9-setup-7.png)
+
 You should see Cloud9 console in a few moments.
 
-![Cloud9-1](/images/Cloud9-1.png)
+![cloud9-setup-7](/images/cloud9-setup-7.png)
 
-On Cloud9, open a new terminal and run command-
+![cloud9-setup-8](/images/cloud9-setup-8.png)
 
-```shell
-kubectl get ingress -n istio-system
-```
+![cloud9-setup-9](/images/cloud9-setup-9.png)
 
-You can use the ingress URL to authenticate and login to Kubeflow.
+![cloud9-setup-10](/images/cloud9-setup-10.png)
+
+![cloud9-setup-11](/images/cloud9-setup-11.png)
 
 
 ## Deleting the AWS resources
