@@ -20,7 +20,7 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 ![ScreenShot1](/images/ScreenShot1.png)
 
-2) The Cloudformation will run for about 20-25 minutes and will
+2) The Cloudformation will perform below tasks
 
   * Setup a Linux Jump Box with eksctl and kubectl.
   * Deploy EKS, KubeFlow and Sagemaker operators for k8s.
@@ -54,11 +54,35 @@ tail -f cloud-init-output.log
 
 ![Cloud9-8](/images/Cloud9-8.png)
 
-Wait for the installation to complete (should take approx 20-25 minutes). You will see below message at the end of bootstrapping.
+Wait for the installation to complete (should take approx. 30-35 minutes). You will see below message after all the scripts have executed.
 
-![Cloud-Init-Finish](/images/Cloud-Init-Finish.png)
+![session-manager-cloud-init](/images/session-manager-cloud-init.png)
 
-3) Connect to the Linux Jump Box from Cloud9 for accessing Kubeflow dashboard.
+
+3) You can check status of your EKS cluster, SageMaker operators and KubeFlow dashboard from the "Session Manager" console.
+
+
+
+![session-manager-sm-operators](/images/session-manager-sm-operators.png)
+
+![session-manager-eks-nodes](/images/session-manager-eks-nodes.png)
+
+![session-manager-eks-kubeflow-pods](/images/session-manager-eks-kubeflow-pods.png)
+
+![session-manager-eks-ingress-kubeflow](/images/session-manager-eks-ingress-kubeflow.png)
+
+![accessing-eks-ingress-kubeflow-browser](/images/accessing-eks-ingress-kubeflow-browser.png)
+
+![kubeflow-screenshot-1](/images/kubeflow-screenshot-1.png)
+
+![kubeflow-screenshot-2](/images/kubeflow-screenshot-2.png)
+
+
+
+
+## (Optional) Using Cloud9 for accessing EKS, SageMaker Operators and Kubeflow.
+
+In case you wish to use AWS Cloud9 IDE to access your EKS cluster, follow below steps. 
 
 Open Cloud9 Console and create a new environment.
 
@@ -96,7 +120,7 @@ kubectl get ingress -n istio-system
 You can use the ingress URL to authenticate and login to Kubeflow.
 
 
-### Deleting the AWS resources
+## Deleting the AWS resources
 
 1) eksctl delete cluster
 2) Delete IAM OIDC
