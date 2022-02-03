@@ -64,6 +64,7 @@ Wait for the installation to complete (should take approx. 30-35 minutes). You w
 You can check status of your EKS cluster, SageMaker operators and KubeFlow dashboard from the "Session Manager" console. Switch to ec2-user and run below commands and see their respective outputs.
 
 ```
+sudo su - ec2-user
 kubectl -n sagemaker-k8s-operator-system get pods
 ```
 
