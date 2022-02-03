@@ -56,3 +56,10 @@ export NODE_IAM_ROLE_NAME=$(eksctl get iamidentitymapping --cluster ${AWS_CLUSTE
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonSageMakerFullAccess
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
+
+export ISTIO_URL=$(kubectl get ingress -n istio-system | awk  '{print $4}' | grep -i istio)
+aws ssm put-parameter --name "ISTIO_URL" --value "${ISTIO_URL}" --type String
+aws ssm put-parameter --name "ISTIO_USER" --value "admin@kubeflow.org" --type String
+aws ssm put-parameter --name "ISTIO_PASS" --value "12341234" --type String
+
+
