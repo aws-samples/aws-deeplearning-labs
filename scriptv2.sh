@@ -40,7 +40,7 @@ cd ${KF_DIR} && wget -O kfctl_aws.yaml $CONFIG_URI
 sed -i "s@us-west-2@$AWS_REGION@" ${CONFIG_FILE}
 sed -i "s@#roles:@roles:@" ${CONFIG_FILE}
 #sed -i "s@- eksctl-${AWS_CLUSTER_NAME}-nodegroup-ng-a2-NodeInstanceRole-xxxxxxx@#- eksctl-${AWS_CLUSTER_NAME}-nodegroup-ng-a2-NodeInstanceRole-xxxxxxx@" ${CONFIG_FILE}
-sed -i "s@#- eksctl-kubeflow-aws-nodegroup-ng-a2-NodeInstanceRole-xxxxxxx@- $ROLE_NAME@" $CONFIG_FILE}
+sed -i "s@#- eksctl-kubeflow-aws-nodegroup-ng-a2-NodeInstanceRole-xxxxxxx@- $ROLE_NAME@" ${CONFIG_FILE}
 
 
 curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/aws-iam-authenticator
