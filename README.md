@@ -25,7 +25,7 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
   * Setup a Linux Jump Box with eksctl and kubectl.
   * Deploy EKS, KubeFlow and Sagemaker operators for k8s.
   * Deploy Cloud9.
-  * Copy the Kubeflow URLs to System Manager parameter store.
+  * Copy the Kubeflow URL, userid and password to System Manager parameter store.
 
 
 ### Accessing Kubeflow Dashboard
