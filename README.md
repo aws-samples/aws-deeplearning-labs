@@ -27,7 +27,7 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
   * Deploy Cloud9.
 
 
-## Accessing Kubeflow Dashboard
+### Accessing Kubeflow Dashboard
 
 ![Paramter-Store-1](/images/Parameter-Store-1.png)
 
@@ -37,9 +37,10 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 ![Paramter-Store-4](/images/Parameter-Store-4.png)
 
-Copy the URL under address open it on browser on your workstation.
 
-#### For the purposes of this demo, our installation uses default passwords as mentioned at https://v1-4-branch.kubeflow.org/docs/distributions/aws/deploy/install-kubeflow/#understanding-the-deployment-process. Please make sure you are changing the password for admin or create a new user.
+#### Take a note of the Value of ISTIO_URL, ISTIO_PASS and ISTIO_USER. 
+
+Open ISTIO_URL in a new browser window on your workstation. For userid and password use the values of ISTIO_USER and ISTIO_PASS.
 
 ![accessing-eks-ingress-kubeflow-browser](/images/accessing-eks-ingress-kubeflow-browser.png)
 
