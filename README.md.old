@@ -26,16 +26,67 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
   * Deploy EKS, KubeFlow and Sagemaker operators for k8s.
   * Deploy Cloud9.
 
+Go to Cloudformation service in AWS Console and check the stack which you just created-
 
-## Accessing Kubeflow Dashboard
+![Image2](/images/Image2.png)
 
-![Paramter-Store-1](/images/Parameter-Store-1.png)
+Go to resources tab in the Cloudformation
 
-![Paramter-Store-2](/images/Parameter-Store-2.png)
+![Image3](/images/Image3.png)
 
-![Paramter-Store-3](/images/Parameter-Store-3.png)
+Select the WebServerInstance to go to the Linux Jump Box in EC2 console and select Connect.
 
-![Paramter-Store-4](/images/Parameter-Store-4.png)
+![Cloud9-9.png](/images/Cloud9-9.png)
+
+Select "Session Manager" and then click on "Connect". This will open SSH shell in browser.
+
+![Cloud9-6](/images/Cloud9-6.png)
+
+Watch the installation process by running following commands.
+
+```
+sudo su - 
+cd /var/log
+tail -f cloud-init-output.log
+```
+
+![Cloud9-7](/images/Cloud9-7.png)
+
+![Cloud9-8](/images/Cloud9-8.png)
+
+Wait for the installation to complete (should take approx. 30-35 minutes). You will see below message after all the scripts have executed.
+
+![session-manager-cloud-init](/images/session-manager-cloud-init.png)
+
+
+## Accessing EKS and Kubeflow from Session Manager.
+
+You can check status of your EKS cluster, SageMaker operators and KubeFlow dashboard from the "Session Manager" console. Switch to ec2-user and run below commands and see their respective outputs.
+
+```
+sudo su - ec2-user
+kubectl -n sagemaker-k8s-operator-system get pods
+```
+
+![session-manager-sm-operators](/images/session-manager-sm-operators.png)
+
+```
+kubectl get nodes
+```
+
+![session-manager-eks-nodes](/images/session-manager-eks-nodes.png)
+
+```
+kubectl get pods -n kubeflow
+```
+
+![session-manager-eks-kubeflow-pods](/images/session-manager-eks-kubeflow-pods.png)
+
+```
+kubectl get ingress -n istio-system
+```
+
+![session-manager-eks-ingress-kubeflow](/images/session-manager-eks-ingress-kubeflow.png)
 
 Copy the URL under address open it on browser on your workstation.
 
