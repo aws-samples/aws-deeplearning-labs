@@ -30,11 +30,19 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 ### Accessing Kubeflow Dashboard
 
+From AWS Console, open Systems Manager.
+
 ![Paramter-Store-1](/images/Parameter-Store-1.png)
+
+Select Parameter Store
 
 ![Paramter-Store-2](/images/Parameter-Store-2.png)
 
+We can see the Cloudformation has created three parameters in the parameter store.
+
 ![Paramter-Store-3](/images/Parameter-Store-3.png)
+
+You can check for value of each parameter by selecting respective entry. For example below screenshot shows the value of ISTIO_URL.
 
 ![Paramter-Store-4](/images/Parameter-Store-4.png)
 
