@@ -57,6 +57,8 @@ aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aw
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE_NAME} --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
 
+sleep 600
+
 export ISTIO_URL=$(kubectl get ingress -n istio-system | awk  '{print $4}' | grep -i istio)
 aws ssm put-parameter --name "ISTIO_URL" --value "${ISTIO_URL}" --type String
 aws ssm put-parameter --name "ISTIO_USER" --value "admin@kubeflow.org" --type String
