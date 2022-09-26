@@ -24,9 +24,9 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 ## Deleting the AWS resources
 
-
-
-
+```shell
+make delete
+```
 
 ### Security
 
