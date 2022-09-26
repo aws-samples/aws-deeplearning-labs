@@ -24,7 +24,8 @@ EOF
 echo "export AWS_CLUSTER_NAME=${CLUSTER_NAME}" | tee -a ~/.bash_profile
 echo "export AWS_REGION=${CLUSTER_REGION}" | tee -a ~/.bash_profile
 
-aws configure --profile=kubeflow set default.region ${CLUSTER_REGION}
+aws configure set region ${CLUSTER_REGION} --profile kubeflow
+aws configure set output json --profile kubeflow
 export AWS_PROFILE=kubeflow
 aws sts get-caller-identity
 
