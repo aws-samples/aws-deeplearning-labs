@@ -20,7 +20,20 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 ### Accessing Kubeflow Dashboard
 
-  * You can run Kubeflow dashboard locally in Cloud9 environment without exposing your URLs to public Internet.  
+You can run Kubeflow dashboard locally in Cloud9 environment without exposing your URLs to public Internet.
+
+From Terraform folder, run
+
+```shell
+$(terraform output -raw configure_kubectl)
+```
+
+From kubeflow manifest folder, run
+
+```shell
+make port-forward
+```
+
 
 ## Deleting the AWS resources
 
