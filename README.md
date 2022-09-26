@@ -1,9 +1,6 @@
 ## EKS Kubeflow Quickstart (Update 09/26/2022)
 
-For people who wish to start using KubeFlow and Sagemaker operators for Kubernetes without spending any time on installation of underlying infrastructure and tools can use the CloudFormation in this git repo. The scripts in this git repo are referenced from -
-
-  - https://eksworkshop.com/ 
-  - https://awslabs.github.io/kubeflow-manifests/main/docs/deployment/vanilla/guide-terraform/
+Use this git repo to set up Kubeflow 1.6 running on EKS 1.22. The scripts in this git repo are referenced fromhttps://awslabs.github.io/kubeflow-manifests/main/docs/deployment/vanilla/guide-terraform/
 
 ### Instructions
 
@@ -17,19 +14,17 @@ aws cloudformation create-stack --stack-name myteststack --template-body file://
 
 2) The Cloudformation will perform below tasks
 
-  * Setup a Linux Jump Box with eksctl and kubectl.
-  * Deploy EKS, KubeFlow and Sagemaker operators for k8s.
+  * Setup a Ubuntu Linux Jump Box.
+  * Deploy EKS 1.22, KubeFlow 1.6, SageMaker ACKs
   * Deploy Cloud9.
-  * Copy the Kubeflow URL, userid and password to System Manager parameter store.
-
 
 ### Accessing Kubeflow Dashboard
 
-
-
-
+  * You can run Kubeflow dashboard locally in Cloud9 environment without exposing your URLs to public Internet.  
 
 ## Deleting the AWS resources
+
+
 
 
 
