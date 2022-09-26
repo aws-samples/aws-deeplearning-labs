@@ -14,7 +14,7 @@ nvm install node
 /bin/su -c "nvm install node" - ec2-user
 
 #Install Dev Tools
-sudo yum -y groupinstall "Development Tools"
+sudo apt update
 
 # Install Cloud9 with Ec2-user
 
