@@ -44,10 +44,10 @@
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
              "#!/bin/bash -xe\n",
              "apt install -y aws-cfn-bootstrap git\n",
-             "cd /home/ec2-user && git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start.git --branch kubeflow1.6\n",
-             "cd /home/ec2-user/eks-kubeflow-cloudformation-quick-start\n",
-             "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv1.sh\n",
-             "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv2.sh\n"
+             "cd /home/ubuntu && git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start.git --branch kubeflow1.6\n",
+             "cd /home/ubuntu/eks-kubeflow-cloudformation-quick-start\n",
+             "/bin/su - ubuntu bash -c /home/ubuntu/eks-kubeflow-cloudformation-quick-start/scriptv1.sh\n",
+             "/bin/su - ubuntu bash -c /home/ubuntu/eks-kubeflow-cloudformation-quick-start/scriptv2.sh\n"
         ]]}}
       },
       "CreationPolicy" : {
