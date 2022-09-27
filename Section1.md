@@ -91,16 +91,19 @@ git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start
 Access terraform folder by running below command. 
 
 ```shell
-
+cd eks-kubeflow-cloudformation-quick-start
 ```
 
 ![ScreenShot21](/images/a21.png)
 
-Run make deploy from Terraform folder.
+Run scriptv1.sh
 
 ```shell
-make deploy
+./scriptv1.sh
 ```
+
+Scriptv1.sh will run for about 20-25 minutes and will setup EKS, Kubeflow in our AWS account using Terraform.
+
 
 ### Accessing Kubeflow Dashboard
 
@@ -111,6 +114,7 @@ From Terraform folder, run
 ```shell
 $(terraform output -raw configure_kubectl)
 ```
+![ScreenShot22](/images/a22.png)
 
 From kubeflow manifest folder, run
 
@@ -118,11 +122,15 @@ From kubeflow manifest folder, run
 make port-forward
 ```
 
-![ScreenShot22](/images/a22.png)
 
 ![ScreenShot23](/images/a23.png)
 
+
+Select "Preview Running Application"
+
 ![ScreenShot24](/images/a24.png)
+
+Kubeflow Dashboard
 
 ![ScreenShot25](/images/a25.png)
 
