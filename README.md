@@ -7,9 +7,9 @@ https://awslabs.github.io/kubeflow-manifests/main/docs/deployment/vanilla/guide-
 ### Instructions
 
 
-For this workshop, follow [StepbyStep-Instructions] (https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/kubeflow1.6/StepbyStep-Instructions.md#kubeflow-setup-instructions-update-09262022)
+For this workshop, follow [Cloud9 Instructions](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/kubeflow1.6/StepbyStep-Instructions.md#kubeflow-setup-instructions-update-09262022)
 
-For automated deployment of Kubeflow1.6 follow [CloudFormation KubeFlow Instructions] (https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/kubeflow1.6/Instructions-CF.md#eks-kubeflow-quickstart-update-09262022)
+For automated deployment of Kubeflow1.6 follow [CloudFormation KubeFlow Instructions](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/kubeflow1.6/Instructions-CF.md#eks-kubeflow-quickstart-update-09262022)
 
 
 ### Security
