@@ -110,6 +110,7 @@ You can run Kubeflow dashboard locally in Cloud9 environment without exposing yo
 From Terraform folder, run
 
 ```shell
+cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start/kubeflow-manifests/deployments/vanilla/terraform
 $(terraform output -raw configure_kubectl)
 ```
 ![ScreenShot22](/images/a22.png)
@@ -117,6 +118,7 @@ $(terraform output -raw configure_kubectl)
 From kubeflow manifest folder, run
 
 ```shell
+cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start/kubeflow-manifests
 make port-forward
 ```
 
