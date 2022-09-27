@@ -9,11 +9,19 @@ Create a Cloud9 Environment.
 
 ![ScreenShot1](/images/a1.png)
 
+Select Create Environment
+
 ![ScreenShot2](/images/a2.png)
+
+Add details
 
 ![ScreenShot3](/images/a3.png)
 
+For Instance type, you can select M5.Large. For Platform, select Ubuntu Server 18.04 LTS
+
 ![ScreenShot4](/images/a4.png)
+
+Select Create Environment
 
 ![ScreenShot5](/images/a5.png)
 
@@ -21,31 +29,70 @@ Create a Cloud9 Environment.
 
 ![ScreenShot7](/images/a7.png)
 
+Select "Share" on right corner
+
 ![ScreenShot8](/images/a8.png)
+
+Under AWS SETTINGS, un-select "AWS Managed temporary credentials"
 
 ![ScreenShot9](/images/a9.png)
 
+Go to AWS Management console, select EC2
+
 ![ScreenShot10](/images/a10.png)
+
+Select the Cloud9 Instance in EC2 console, click on Actions --> Security --> Modify IAM Role
 
 ![ScreenShot11](/images/a11.png)
 
+On next screen, select "Create new IAM Role"
+
 ![ScreenShot12](/images/a12.png)
+
+Hit Create Role
 
 ![ScreenShot13](/images/a13.png)
 
+Select AWS Service and EC2
+
 ![ScreenShot14](/images/a14.png)
+
+Look for Administrator on search bar at top and select "AdministratorAccess" policy name. 
 
 ![ScreenShot15](/images/a15.png)
 
+Give Role Name and Description and create the role.
+
 ![ScreenShot16](/images/a16.png)
+
 
 ![ScreenShot17](/images/a17.png)
 
+Go back to the previous screen and select the role which we created and select "Update IAM role"
+
 ![ScreenShot18](/images/a18.png)
+
+On Cloud9 terminal, we can test our permissions
+
+```shell
+aws sts get-caller-identity
+```
 
 ![ScreenShot19](/images/a19.png)
 
+Clone the git repo. 
+
+```shell
+git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start.git
+```
+
 ![ScreenShot20](/images/a20.png)
+
+Access terraform folder by running below command. 
+
+```shell
+
+```
 
 ![ScreenShot21](/images/a21.png)
 
