@@ -12,7 +12,7 @@
     },
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"HVM64" : "ami-0fc61db8544a617ed", "HVMG2" : "ami-0a584ac55a7631c0c"},
-      "us-west-2"        : {"HVM64" : "ami-0ce21b51cb31a48b8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "us-west-2"        : {"HVM64" : "ami-00127be401e7de611", "HVMG2" : "ami-00127be401e7de611"},
       "us-west-1"        : {"HVM64" : "ami-09a7fe78668f1e2c0", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
       "eu-west-1"        : {"HVM64" : "ami-04d5cc9b88f9d1d39", "HVMG2" : "ami-0a7c483d527806435"},
       "eu-west-2"        : {"HVM64" : "ami-0cb790308f7591fa6", "HVMG2" : "NOT_SUPPORTED"},
@@ -43,13 +43,11 @@
         "SecurityGroups" : [ {"Ref" : "WebServerSecurityGroup"} ],
         "UserData"       : { "Fn::Base64" : { "Fn::Join" : ["", [
              "#!/bin/bash -xe\n",
-             "yum install -y aws-cfn-bootstrap git\n",
-             "cd /home/ec2-user && git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start.git\n",
-             "cd /home/ec2-user/eks-kubeflow-cloudformation-quick-start\n",
-             "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv1.sh\n",
-             "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv2.sh\n",
-             "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv3.sh\n",
-             "/bin/su - ec2-user bash -c /home/ec2-user/eks-kubeflow-cloudformation-quick-start/scriptv4.sh\n"
+             "apt-get install -y python3-setuptools git ec2-instance-connect jq\n",
+             "cd /home/ubuntu && git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start.git --branch kubeflow1.6\n",
+             "cd /home/ubuntu/eks-kubeflow-cloudformation-quick-start\n",
+             "/bin/su - ubuntu bash -c /home/ubuntu/eks-kubeflow-cloudformation-quick-start/scriptv1.sh\n",
+             "/bin/su - ubuntu bash -c /home/ubuntu/eks-kubeflow-cloudformation-quick-start/scriptv2.sh\n"
         ]]}}
       },
       "CreationPolicy" : {
