@@ -88,8 +88,6 @@ git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start
 
 ![ScreenShot20](/images/a20.png)
 
-Access terraform folder by running below command. 
-
 ```shell
 cd eks-kubeflow-cloudformation-quick-start
 ```
