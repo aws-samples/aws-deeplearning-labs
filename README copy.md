@@ -49,7 +49,11 @@ Create a Cloud9 Environment.
 
 ![ScreenShot21](/images/a21.png)
 
+Run make deploy from Terraform folder.
 
+```shell
+make deploy
+```
 
 ### Accessing Kubeflow Dashboard
 
@@ -77,6 +81,7 @@ make port-forward
 
 
 ## Deleting the AWS resources
+
 
 ```shell
 cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start/kubeflow-manifests/deployments/vanilla/terraform
