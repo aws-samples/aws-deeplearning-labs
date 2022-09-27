@@ -7,8 +7,7 @@ https://awslabs.github.io/kubeflow-manifests/main/docs/deployment/vanilla/guide-
 ### Instructions
 
 
-Refer [Section 1](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/StepbyStep-Instructions.md#kubeflow-setup-instructions-update-09262022) for setting up Cloud9 and access Kubeflow Dashboard.
-
+Refer [Section 1](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/Section1.md#section-1) for setting up Cloud9 and access Kubeflow Dashboard.
 
 ### Delete 
 
