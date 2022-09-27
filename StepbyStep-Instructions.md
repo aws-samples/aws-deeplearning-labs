@@ -1,4 +1,4 @@
-## Kubeflow Setup Instructions (Update 09/26/2022)
+## Section 1
 
 Use below instructions to set up Kubeflow 1.6 running on EKS 1.22. The scripts are referenced from https://awslabs.github.io/kubeflow-manifests/main/docs/deployment/vanilla/guide-terraform/
 
@@ -87,11 +87,3 @@ make port-forward
 cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start/kubeflow-manifests/deployments/vanilla/terraform
 make delete
 ```
-
-### Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
-
-### License
-
-This library is licensed under the MIT-0 License. See the LICENSE file.
