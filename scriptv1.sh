@@ -34,7 +34,9 @@ aws sts get-caller-identity
 terraform init && terraform plan
 make deploy
 
-aws iam attach-role-policy --role-name ${AWS_CLUSTER_NAME}-managed-ondemand --policy-arn arn:aws:iam::aws:policy/AmazonSageMakerFullAccess
-aws iam attach-role-policy --role-name ${AWS_CLUSTER_NAME}-managed-ondemand --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
-aws iam attach-role-policy --role-name ${AWS_CLUSTER_NAME}-managed-ondemand --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
-aws iam attach-role-policy --role-name ${AWS_CLUSTER_NAME}-managed-ondemand --policy-arn arn:aws:iam::aws:policy/IAMReadOnlyAccess
+export NODE_IAM_ROLE=${AWS_CLUSTER_NAME}-managed-ondemand
+
+aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam::aws:policy/AmazonSageMakerFullAccess
+aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
+aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
+aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam::aws:policy/IAMReadOnlyAccess
