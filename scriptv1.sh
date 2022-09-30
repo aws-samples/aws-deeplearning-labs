@@ -25,6 +25,7 @@ EOF
 
 echo "export AWS_CLUSTER_NAME=${CLUSTER_NAME}" | tee -a ~/.bash_profile
 echo "export AWS_REGION=${CLUSTER_REGION}" | tee -a ~/.bash_profile
+echo "export NODE_IAM_ROLE=${AWS_CLUSTER_NAME}-managed-ondemand" | tee -a ~/.bash_profile
 
 aws configure set region ${CLUSTER_REGION} --profile kubeflow
 aws configure set output json --profile kubeflow
@@ -34,7 +35,8 @@ aws sts get-caller-identity
 terraform init && terraform plan
 make deploy
 
-export NODE_IAM_ROLE=${AWS_CLUSTER_NAME}-managed-ondemand
+source ~/.bash_profile
+source ~/.bashrc
 
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam::aws:policy/AmazonSageMakerFullAccess
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
