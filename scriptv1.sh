@@ -25,7 +25,7 @@ EOF
 
 echo "export AWS_CLUSTER_NAME=${CLUSTER_NAME}" | tee -a ~/.bash_profile
 echo "export AWS_REGION=${CLUSTER_REGION}" | tee -a ~/.bash_profile
-echo "export NODE_IAM_ROLE=${AWS_CLUSTER_NAME}-managed-ondemand" | tee -a ~/.bash_profile
+echo "export NODE_IAM_ROLE=${CLUSTER_NAME}-managed-ondemand" | tee -a ~/.bash_profile
 
 aws configure set region ${CLUSTER_REGION} --profile kubeflow
 aws configure set output json --profile kubeflow
