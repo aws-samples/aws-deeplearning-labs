@@ -122,8 +122,14 @@ cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start/kubeflow-man
 make port-forward
 ```
 
-
 ![ScreenShot23](/images/a23.png)
+
+In an another terminal window, run the following.
+
+```
+cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start
+./profile-pod-default.sh
+```
 
 
 Select "Preview Running Application"
