@@ -43,6 +43,6 @@ aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess
 aws iam attach-role-policy --role-name ${NODE_IAM_ROLE} --policy-arn arn:aws:iam::aws:policy/IAMReadOnlyAccess
 
-cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start
-sh profile-pod-default.sh
+#cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start
+#sh profile-pod-default.sh
 
