@@ -105,7 +105,7 @@ You can run Kubeflow dashboard locally in Cloud9 environment without exposing yo
 ./kubeflow_dashboard.sh
 ```
 
-![ScreenShot23](/images/a23.png)
+![ScreenShot26](/images/a26.png)
 
 
 Select "Preview Running Application". Enter the default credentials (user@example.com / 12341234) to log in to Kubeflow.
