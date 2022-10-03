@@ -94,7 +94,7 @@ Run install_eks_kubeflow.sh
 ./install_eks_kubeflow.sh
 ```
 
-Scriptv1.sh will run for about 20-25 minutes and will setup EKS, Kubeflow in our AWS account using Terraform.
+install_eks_kubeflow.sh will run for about 30-55 minutes and will setup EKS, Kubeflow in our AWS account using Terraform.
 
 
 ### Accessing Kubeflow Dashboard
