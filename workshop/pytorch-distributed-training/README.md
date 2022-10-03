@@ -1,8 +1,8 @@
 # Distributed Training using PyTorch with Kubeflow on AWS and Amazon SageMaker
 
-Welcome! By completing this workshop you will learn how to run distributed data parallel model training on Amazon SageMaker(https://aws.amazon.com/sagemaker/) uing [PyTorch](https://pytorch.org) on Kubeflow on AWS (an AWS-specific distribution of Kubeflow).
+Welcome! By completing this workshop you will learn how to run distributed data parallel model training on Amazon SageMaker(https://aws.amazon.com/sagemaker/) using [PyTorch](https://pytorch.org) and Kubeflow on AWS (an AWS-specific distribution of Kubeflow).
 
-The only prerequisite for this workshop is access to an AWS account. The steps included here will walk you through accessing AWS account, creating and deploying AWS EKS cluster and Kubeflow on AWS using Terraform scripts and running distributed training of an image classification model using PyTorch DDP on Amazon SageMaker through Kubeflow on AWS Pipeline integration. 
+The only prerequisite for this workshop is access to an AWS account. The steps included in this workshop will walk you through accessing AWS account, creating and deploying AWS EKS cluster and Kubeflow on AWS using Terraform scripts and running distributed training of an image classification model using PyTorch DDP on Amazon SageMaker through Kubeflow on AWS Pipeline integration. 
 
 The workshop architecture at a high level can be visualized by the diagram below.
 
