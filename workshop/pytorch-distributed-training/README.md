@@ -6,7 +6,7 @@ The only prerequisite for this workshop is access to an AWS account. The steps i
 
 The workshop architecture at a high level can be visualized by the diagram below.
 
-![a27](/img/a27.png)
+![image](/image/a27.png)
 
 The workshop is designed to introduce the concepts of deploying this architecture and running small-scale distributed training for educational purposes, however the same architecture can be applied for training at large scale by adjusting the number and type of nodes used in the Amazon SageMaker cluster, using accelerators ([NVIDIA GPUs](https://aws.amazon.com/nvidia/), [AWS Trainium](https://aws.amazon.com/machine-learning/trainium/), and high-performance shared storage like [FSx for Lustre](https://aws.amazon.com/fsx/lustre/).
 
