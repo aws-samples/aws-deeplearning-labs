@@ -99,32 +99,13 @@ install_eks_kubeflow.sh will run for about 30-35 minutes and will setup EKS, Kub
 
 ### Accessing Kubeflow Dashboard
 
-You can run Kubeflow dashboard locally in Cloud9 environment without exposing your URLs to public Internet.
-
-From Terraform folder, run
+You can run Kubeflow dashboard locally in Cloud9 environment without exposing your URLs to public Internet. Run -
 
 ```shell
-cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start/kubeflow-manifests/deployments/vanilla/terraform
-$(terraform output -raw configure_kubectl)
-```
-![ScreenShot22](/images/a22.png)
-
-Next, run the following commands
-
-```
-cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start
-./profile-pod-default.sh
-```
-
-From kubeflow manifest folder, run
-
-```shell
-cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start/kubeflow-manifests
-make port-forward
+./kubeflow_dashboard.sh
 ```
 
 ![ScreenShot23](/images/a23.png)
-
 
 
 Select "Preview Running Application". Enter the default credentials (user@example.com / 12341234) to log in to Kubeflow.
