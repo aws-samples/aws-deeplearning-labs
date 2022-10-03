@@ -1,4 +1,4 @@
-## Section 1
+## Installation of KubeFlow, EKS using Terraform
 
 Create a Cloud9 Environment.
 
@@ -94,7 +94,7 @@ Run install_eks_kubeflow.sh
 ./install_eks_kubeflow.sh
 ```
 
-install_eks_kubeflow.sh will run for about 30-55 minutes and will setup EKS, Kubeflow in our AWS account using Terraform.
+install_eks_kubeflow.sh will run for about 30-35 minutes and will setup EKS, Kubeflow in our AWS account using Terraform.
 
 
 ### Accessing Kubeflow Dashboard
@@ -109,6 +109,13 @@ $(terraform output -raw configure_kubectl)
 ```
 ![ScreenShot22](/images/a22.png)
 
+Next, run the following commands
+
+```
+cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start
+./profile-pod-default.sh
+```
+
 From kubeflow manifest folder, run
 
 ```shell
@@ -118,15 +125,9 @@ make port-forward
 
 ![ScreenShot23](/images/a23.png)
 
-In an another terminal window, run the following.
-
-```
-cd /home/ubuntu/environment/eks-kubeflow-cloudformation-quick-start
-./profile-pod-default.sh
-```
 
 
-Select "Preview Running Application"
+Select "Preview Running Application". Enter the default credentials (user@example.com / 12341234) to log in to Kubeflow.
 
 ![ScreenShot24](/images/a24.png)
 
