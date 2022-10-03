@@ -90,10 +90,10 @@ cd eks-kubeflow-cloudformation-quick-start
 
 ![ScreenShot21](/images/a21.png)
 
-Run scriptv1.sh
+Run install_eks_kubeflow.sh
 
 ```shell
-./scriptv1.sh
+./install_eks_kubeflow.sh
 ```
 
 Scriptv1.sh will run for about 20-25 minutes and will setup EKS, Kubeflow in our AWS account using Terraform.
