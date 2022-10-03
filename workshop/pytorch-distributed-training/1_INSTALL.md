@@ -88,8 +88,6 @@ git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start
 cd eks-kubeflow-cloudformation-quick-start
 ```
 
-![ScreenShot21](/images/a21.png)
-
 Run install_eks_kubeflow.sh
 
 ```shell
