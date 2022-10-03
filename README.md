@@ -7,7 +7,7 @@ https://awslabs.github.io/kubeflow-manifests/main/docs/deployment/vanilla/guide-
 ### Instructions
 
 
-Go to [workshop](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/tree/master/workshop/pytorch-distributed-training) folder for step by step instructions.
+Go to [workshop](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/tree/master/workshop/pytorch-distributed-training) folder for step by step instructions.
 
 ### Delete 
 
