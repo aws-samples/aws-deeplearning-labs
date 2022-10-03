@@ -11,7 +11,7 @@ Go to [workshop](https://github.com/aws-samples/eks-kubeflow-cloudformation-quic
 
 ### Delete 
 
-Refer [Delete Instructions](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/Section-delete.md)
+Refer [Delete Instructions](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/blob/master/Section-delete.md#deleting-the-aws-resources)
 
 
 ### Security
