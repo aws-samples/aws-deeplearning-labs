@@ -8,6 +8,10 @@ The workshop architecture at a high level can be visualized by the diagram below
 
 ![image](/images/a27.png)
 
+1. Users login to browser (preferably Chrome)
+2. We create a Cloud9 environment and copy installation scripts from GitHub
+3. We run installation scripts which create EKS environment and deploy KubeFlow.
+
 The workshop is designed to introduce the concepts of deploying this architecture and running small-scale distributed training for educational purposes, however the same architecture can be applied for training at large scale by adjusting the number and type of nodes used in the Amazon SageMaker cluster, using accelerators ([NVIDIA GPUs](https://aws.amazon.com/nvidia/), [AWS Trainium](https://aws.amazon.com/machine-learning/trainium/), and high-performance shared storage like [FSx for Lustre](https://aws.amazon.com/fsx/lustre/).
 
 # How does Kubeflow on AWS and SageMaker help?
