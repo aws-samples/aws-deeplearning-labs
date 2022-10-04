@@ -18,7 +18,7 @@ The workshop is designed to introduce the concepts of deploying this architectur
 
 This workshop is organized in a number of sequential steps. Steps 1 through 3 are required to complete the workshop.
 
-## 1. Login to AWS Account ([Step0.1_AWS_LOGIN.md](Step0.1_AWS_LOGIN.md))
+## 1. Login to AWS Account ([Step0.1_AWS_LOGIN.md](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.1_AWS_LOGIN.md#workshop-execution-steps))
 1 If you are running the workshop on your own and you don’t already have an AWS account with Administrator access, please create one now by clicking here (https://aws.amazon.com/getting-started/).
 
 2 If you are running the workshop at an AWS Event or with AWS teams, please follow the instructions in [Step0.1_AWS_LOGIN.md](Step0.1_AWS_LOGIN.md).
