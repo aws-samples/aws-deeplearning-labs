@@ -35,7 +35,7 @@ Scroll down the list on left and click AWS SETTINGS, un-select "AWS Managed temp
 Go to AWS Management console, select EC2.
 You can click T icon on top left and click Manage EC2 Instance
 
-![ScreenShot10](/images/a29.png)
+![ScreenShot10](/images/a30.png)
 
 Select the Cloud9 Instance in EC2 console, click on Actions --> Security --> Modify IAM Role
 
