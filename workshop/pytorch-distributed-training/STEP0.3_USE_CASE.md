@@ -1,3 +1,5 @@
+## Use Cases
+
 1. Once you are logged into the Kubeflow dashboard, ensure you have the right namespace "kubeflow-user-example-com" on top of the drop down
 
 <center><img src="img/1_kubeflow_dashboard.png" width="80%"/> </center><br/><br/>
