@@ -64,3 +64,12 @@ EoF
 aws iam create-role --role-name sagemakerrole --assume-role-policy-document file://trust.json --output=text
 aws iam attach-role-policy --role-name sagemakerrole --policy-arn arn:aws:iam::aws:policy/AmazonSageMakerFullAccess
 aws iam attach-role-policy --role-name sagemakerrole --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
+
+# Getting EKS Cluster Node Group role with aws APIs. 
+
+EKS_CLUSTER_NGNAME=$(aws eks list-nodegroups --cluster-name $CLUSTER_NAME | jq -r '.nodegroups[0]')
+echo $EKS_CLUSTER_NGNAME
+EKS_NODE_ROLE=$(aws eks describe-nodegroup --cluster-name $CLUSTER_NAME --nodegroup-name $EKS_CLUSTER_NGNAME | jq -r '.nodegroup.nodeRole' | grep -o 'eks.*')
+echo $EKS_NODE_ROLE
+
+
