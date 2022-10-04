@@ -18,16 +18,16 @@ The workshop is designed to introduce the concepts of deploying this architectur
 
 This workshop is organized in a number of sequential steps. Steps 1 through 3 are required to complete the workshop.
 
-## 1. Login to AWS Account ([Step0.1_AWS_LOGIN.md](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.1_AWS_LOGIN.md#workshop-execution-steps))
+## 1. Login to AWS Account ([Step0.1_AWS_LOGIN.md](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.1_AWS_LOGIN.md#workshop-execution-steps))
 1 If you are running the workshop on your own and you don’t already have an AWS account with Administrator access, please create one now by clicking here (https://aws.amazon.com/getting-started/).
 
-2 If you are running the workshop at an AWS Event or with AWS teams, please follow the instructions in [Step0.1_AWS_LOGIN.md](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.1_AWS_LOGIN.md#workshop-execution-steps).
+2 If you are running the workshop at an AWS Event or with AWS teams, please follow the instructions in [Step0.1_AWS_LOGIN.md](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.1_AWS_LOGIN.md#workshop-execution-steps).
 
-## 2. Setup Amazon EKS and Kubeflow on AWS ([1_INSTALL.md](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.2_INSTALL.md#installation-of-kubeflow-eks-using-terraform))
-Before we get started, we need to set up an AWS account and Cloud9 IDE from which we will execute all the steps in the workshop. You will not be required to install anything on your computer. All of the steps in the workshop will be completed on the cloud through your browser. To set up your account and IDE, please follow the instructions in [Step0.2_INSTALL.md](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.2_INSTALL.md#installation-of-kubeflow-eks-using-terraform).
+## 2. Setup Amazon EKS and Kubeflow on AWS ([Step0.2_INSTALL.md](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.2_INSTALL.md#installation-of-kubeflow-eks-using-terraform))
+Before we get started, we need to set up an AWS account and Cloud9 IDE from which we will execute all the steps in the workshop. You will not be required to install anything on your computer. All of the steps in the workshop will be completed on the cloud through your browser. To set up your account and IDE, please follow the instructions in [Step0.2_INSTALL.md](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.2_INSTALL.md#installation-of-kubeflow-eks-using-terraform).
 
-## 3 Run the use case examples ([Step0.3_USE_CASE.md](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.3_USE_CASE.md#use-cases))
-Set up the Jupyter notebook and run the entire demo by following the instructions in ([Step0.3_USE_CASE.md](https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.3_USE_CASE.md#use-cases))
+## 3 Run the use case examples ([Step0.3_USE_CASE.md](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.3_USE_CASE.md#use-cases))
+Set up the Jupyter notebook and run the entire demo by following the instructions in ([Step0.3_USE_CASE.md](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.3_USE_CASE.md#use-cases))
 
 
 # How does Kubeflow on AWS and SageMaker help?
