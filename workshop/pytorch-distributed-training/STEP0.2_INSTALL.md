@@ -79,7 +79,7 @@ aws sts get-caller-identity
 Clone the git repo. 
 
 ```shell
-git clone https://github.com/kalawat1985/eks-kubeflow-cloudformation-quick-start.git
+git clone https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start.git
 ```
 
 ![ScreenShot20](/images/a20.png)
