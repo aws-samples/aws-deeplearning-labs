@@ -1,6 +1,6 @@
 ## Installation of KubeFlow, EKS using Terraform
 
-Create a Cloud9 Environment.
+Make sure you are in us-west-2 region (Oregon). Create a Cloud9 Environment.
 
 ![ScreenShot1](/images/a1.png)
 
