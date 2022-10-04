@@ -8,3 +8,10 @@ make delete
 ```
 
 Delete IAM role sagemakerrole manually from AWS Console.
+
+Remove hard-coded environment variables in .bash_profile at /home/ubuntu/.bash_profile
+
+AWS_CLUSTER_NAME
+AWS_REGION
+NODE_IAM_ROLE
+
