@@ -26,7 +26,7 @@ Select Create Environment
 
 Click "Settings icon"
 
-![ScreenShot8](/images/a8.png)
+![ScreenShot8](/images/a31.png)
 
 Scroll down the list on left and click AWS SETTINGS, un-select "AWS Managed temporary credentials
 
