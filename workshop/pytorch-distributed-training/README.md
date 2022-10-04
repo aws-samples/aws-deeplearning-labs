@@ -14,6 +14,22 @@ The workshop architecture at a high level can be visualized by the diagram below
 
 The workshop is designed to introduce the concepts of deploying this architecture and running small-scale distributed training for educational purposes, however the same architecture can be applied for training at large scale by adjusting the number and type of nodes used in the Amazon SageMaker cluster, using accelerators ([NVIDIA GPUs](https://aws.amazon.com/nvidia/), [AWS Trainium](https://aws.amazon.com/machine-learning/trainium/), and high-performance shared storage like [FSx for Lustre](https://aws.amazon.com/fsx/lustre/).
 
+# WorkShop Steps
+
+This workshop is organized in a number of sequential steps. Steps 1 through 3 are required to complete the workshop.
+
+## 1. Login to AWS Account ([0_AWS_LOGIN.md](0_AWS_LOGIN.md))
+1 If you are running the workshop on your own and you don’t already have an AWS account with Administrator access, please create one now by clicking here (https://aws.amazon.com/getting-started/).
+
+2 If you are running the workshop at an AWS Event or with AWS teams, please follow the instructions in [0_AWS_LOGIN.md](0_AWS_LOGIN.md).
+
+## 2. Setup Amazon EKS and Kubeflow on AWS ([1_INSTALL.md](1_INSTALL.md))
+Before we get started, we need to set up an AWS account and Cloud9 IDE from which we will execute all the steps in the workshop. You will not be required to install anything on your computer. All of the steps in the workshop will be completed on the cloud through your browser. To set up your account and IDE, please follow the instructions in [1_INSTALL.md](1_INSTALL.md).
+
+## 3 Run the use case examples ([2_USE_CASE.md](2_USE_CASE.md))
+Set up the Jupyter notebook and run the entire demo by following the instructions in ([2_USE_CASE.md](2_USE_CASE.md))
+
+
 # How does Kubeflow on AWS and SageMaker help?
 
 Neural network models built with deep learning frameworks like TensorFlow, PyTorch, MXNet, and others provide much higher accuracy by using significantly larger training datasets, especially in computer vision and natural language processing use cases. However, with large training datasets, it takes longer to train the deep learning models, which ultimately slows down the time to market. If we could scale out a cluster and bring down the model training time from weeks to days or hours, it could have a huge impact on productivity and business velocity.
@@ -33,17 +49,3 @@ Replacing these Kubeflow components decouples critical parts of the Kubeflow con
 
 Kubeflow on AWS helps build a highly available and robust ML platform. This platform provides flexibility to build and train deep learning models and provides access to many open-source toolkits, insights into logs, and interactive debugging for experimentation. However, achieving maximum utilization of infrastructure resources while training deep learning models on hundreds of GPUs still involves a lot of operational overheads. This could be addressed by using SageMaker, which is a fully managed service designed and optimized for handling performant and cost-optimized training clusters that are only provisioned when requested, scaled as needed, and shut down automatically when jobs complete, thereby providing close to 100% resource utilization. You can integrate SageMaker with Kubeflow Pipelines using managed SageMaker components. This allows you to operationalize ML workflows as part of Kubeflow pipelines, where you can use Kubernetes for local training and SageMaker for product-scale training in a hybrid architecture.
 
-# WorkShop Steps
-
-This workshop is organized in a number of sequential steps. Steps 1 through 3 are required to complete the workshop.
-
-## 1. Login to AWS Account ([0_AWS_LOGIN.md](0_AWS_LOGIN.md))
-1 If you are running the workshop on your own and you don’t already have an AWS account with Administrator access, please create one now by clicking here (https://aws.amazon.com/getting-started/).
-
-2 If you are running the workshop at an AWS Event or with AWS teams, please follow the instructions in [0_AWS_LOGIN.md](0_AWS_LOGIN.md).
-
-## 2. Setup Amazon EKS and Kubeflow on AWS ([1_INSTALL.md](1_INSTALL.md))
-Before we get started, we need to set up an AWS account and Cloud9 IDE from which we will execute all the steps in the workshop. You will not be required to install anything on your computer. All of the steps in the workshop will be completed on the cloud through your browser. To set up your account and IDE, please follow the instructions in [1_INSTALL.md](1_INSTALL.md).
-
-## 3 Run the use case examples ([2_USE_CASE.md](2_USE_CASE.md))
-Set up the Jupyter notebook and run the entire demo by following the instructions in ([2_USE_CASE.md](2_USE_CASE.md))
