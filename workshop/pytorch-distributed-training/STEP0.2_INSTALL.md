@@ -1,6 +1,12 @@
 ## Installation of KubeFlow, EKS using Terraform
 
-Make sure you are in us-west-2 region (Oregon). Create a Cloud9 Environment.
+Pre-Requisites
+
+1. Make sure you are in us-west-2 region (Oregon). 
+2. Use Google Chrome for interacting with AWS Console and Kubeflow.
+
+
+Create a Cloud9 Environment.
 
 ![ScreenShot1](/images/a1.png)
 
