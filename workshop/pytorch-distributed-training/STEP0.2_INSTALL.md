@@ -118,6 +118,10 @@ Select "Preview Running Application". Enter the default credentials (user@exampl
 
 ![ScreenShot24](/images/a24.png)
 
+Click on icon in the corner of kubeflow dashboard to detach it from Cloud9 and open it as a separate tab on Chrome.
+
+![ScreenShot24](/images/a31.png)
+
 Kubeflow Dashboard
 
 ![ScreenShot25](/images/a25.png)
