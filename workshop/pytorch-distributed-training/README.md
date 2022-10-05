@@ -16,6 +16,8 @@ The workshop is designed to introduce the concepts of deploying this architectur
 
 # WorkShop Steps
 
+Note: This workshop has been tested in us-west-2 region. Also, Chrome is the preferred browser to use for this workshop. 
+
 This workshop is organized in a number of sequential steps. Steps 1 through 3 are required to complete the workshop.
 
 ## 1. Login to AWS Account ([Step0.1_AWS_LOGIN.md](https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start/blob/master/workshop/pytorch-distributed-training/STEP0.1_AWS_LOGIN.md#workshop-execution-steps))
