@@ -14,11 +14,11 @@ Select Create Environment
 
 ![ScreenShot2](/images/a2.png)
 
-Add details
+Add details and click Next step button 
 
 ![ScreenShot3](/images/a3.png)
 
-For Instance type, you can select M5.Large. For Platform, select Ubuntu Server 18.04 LTS
+For Instance type, you can select m5.Large. For Platform, select Ubuntu Server 18.04 LTS
 
 ![ScreenShot4](/images/a4.png)
 
@@ -59,11 +59,11 @@ Select AWS Service and EC2
 
 ![ScreenShot14](/images/a14.png)
 
-Look for Administrator on search bar at top and select "AdministratorAccess" policy name. 
+Look for Administrator on search bar at top and select "AdministratorAccess" policy name and click “Next” at the bottom right.
 
 ![ScreenShot15](/images/a15.png)
 
-Give Role Name and Description and create the role.
+Give Role Name and Description and create the role by clicking “Create the role” at the bottom right
 
 ![ScreenShot16](/images/a16.png)
 
