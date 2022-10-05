@@ -40,7 +40,6 @@
 2.6 Browse to "eks-kubeflow-cloudformation-quick-start/workshop/pytorch-distributed-training" folder
 
 
-2.7 Run notebook “1_simple_xgboost_training_pipeline.ipynb”      
+2.7 Run notebook “STEP1_create_pipeline_k8s_sagemaker.ipynb”    
 
-
-2.8 Run notebook “2_create_pipeline_k8s_sagemaker.ipynb”    
+2.8 Run notebook “STEP2_simple_xgboost_training_pipeline.ipynb”
