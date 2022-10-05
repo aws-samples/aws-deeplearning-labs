@@ -40,7 +40,7 @@
 2.6 Browse to "eks-kubeflow-cloudformation-quick-start/workshop/pytorch-distributed-training" folder
 
 
-2.7 Run notebook “STEP1_create_pipeline_k8s_sagemaker.ipynb" to create a pipeline that runs and deploy models on Amazon SageMaker
+2.7 Run notebook “STEP1.0_create_pipeline_k8s_sagemaker.ipynb" to create a pipeline that runs and deploy models on Amazon SageMaker
 
 2.8 Run notebook “STEP1.1_invoke_sagemaker_endpoint.ipynb” to invoke and test SageMaker model inference endpoint created in previous notebook
 
