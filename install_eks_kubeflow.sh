@@ -3,8 +3,8 @@
 source ~/.bash_profile
 source ~/.bashrc
 
-export KUBEFLOW_RELEASE_VERSION=v1.6.0
-export AWS_RELEASE_VERSION=main
+export KUBEFLOW_RELEASE_VERSION=v1.6.1
+export AWS_RELEASE_VERSION=8da90693bbc7dda66c60db021305056a2effe252
 
 git clone https://github.com/awslabs/kubeflow-manifests.git && cd kubeflow-manifests
 git checkout ${AWS_RELEASE_VERSION}
