@@ -1,3 +1,25 @@
+#!/bin/bash
+
+if [ "$1" == "" ]; then
+	export NS=kubeflow-user-example-com
+	echo "Argument not provided, assuming default user namespace $NS ..."
+else
+	export NS=$1
+fi
+
+if [ "$2" == "" ]; then
+	echo "CLUSTER_NAME Argument not provided. Please provide a valid cluster name."
+	exit 1
+else
+	export CLUSTER_NAME=$2
+fi
+
+if [ "$3" == "" ]; then
+	echo "CLUSTER_REGION Argument not provided. Please provide a valid cluster region name"
+else
+	export CLUSTER_REGION=$3
+fi
+
 #1. An OIDC provider must exist for your cluster to use IRSA. Create an OIDC provider and associate it with for your Amazon EKS cluster by running the following command, if your cluster doesn’t already have one:
 
 eksctl utils associate-iam-oidc-provider --cluster ${CLUSTER_NAME} \
@@ -25,7 +47,7 @@ apiVersion: kubeflow.org/v1alpha1
 kind: PodDefault
 metadata:
   name: access-ml-pipeline
-  namespace: kubeflow-user-example-com
+  namespace: ${NS}
 spec:
   desc: \"Allow access to Kubeflow Pipelines\"
   selector:
