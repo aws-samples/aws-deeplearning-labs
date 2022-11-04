@@ -14,7 +14,6 @@ import torch.utils.data.distributed
 import torchvision
 from torchvision import datasets, transforms
 import json
-import subprocess
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
