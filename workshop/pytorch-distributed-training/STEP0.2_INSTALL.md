@@ -85,13 +85,13 @@ aws sts get-caller-identity
 Clone the git repo. 
 
 ```shell
-git clone https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start.git
+git clone https://github.com/aws-samples/aws-deeplearning-labs.git
 ```
 
 ![ScreenShot20](/images/a20.png)
 
 ```shell
-cd eks-kubeflow-cloudformation-quick-start
+cd aws-deeplearning-labs
 ```
 
 Run install_eks_kubeflow.sh
