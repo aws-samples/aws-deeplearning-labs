@@ -29,7 +29,7 @@
 <center><img src="img/2.5_jupyterlab.png" width="80%"/> </center><br/><br/>
 
 
-2.6 Clone the repo by entering `https://github.com/aws-samples/eks-kubeflow-cloudformation-quick-start.git` in "Clone a repo" field
+2.6 Clone the repo by entering `https://github.com/aws-samples/aws-deeplearning-labs.git` in "Clone a repo" field
 
 <center><img src="img/2.6.1_git_clone1.png" width="80%"/> </center><br/><br/>
 
@@ -37,7 +37,7 @@
 <center><img src="img/2.6.2_git_clone2.png" width="80%"/> </center><br/><br/>
 
 
-2.6 Browse to "eks-kubeflow-cloudformation-quick-start/workshop/pytorch-distributed-training" folder
+2.6 Browse to "aws-deeplearning-labs/workshop/pytorch-distributed-training" folder
 
 
 2.7 Run notebook “STEP1.0_create_pipeline_k8s_sagemaker.ipynb" to create a pipeline that runs and deploy models on Amazon SageMaker
