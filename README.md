@@ -1,4 +1,4 @@
-## EKS Kubeflow Quickstart (Update 09/26/2022)
+## AWS Deeplearning Labs (Update 04/25/2023)
 
 Use this git repo to set up Kubeflow 1.6 running on EKS 1.22. The scripts in this git repo are referenced from 
 
