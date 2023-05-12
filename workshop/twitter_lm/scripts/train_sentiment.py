@@ -64,6 +64,6 @@ trainer.train()
 trainer.create_model_card()
 
 pipeline = pipeline('sentiment-analysis', model=model, tokenizer=tokenizer)
-pipeline.save_pretrained('/workspace/timelms/scripts/saved_model')
+pipeline.save_pretrained('/workspace/aws-deeplearning-labs/workshop/twitter_lm/scripts/saved_model')
 # res = trainer.evaluate(tokenized_datasets['test'])
 # print(res)
