@@ -1,7 +1,7 @@
 import numpy as np
 import evaluate
 
-from transformers import AutoTokenizer
+from transformers import pipeline, AutoTokenizer
 from transformers import AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
 from datasets import load_dataset, concatenate_datasets
@@ -62,6 +62,8 @@ trainer = Trainer(
 
 trainer.train()
 trainer.create_model_card()
-trainer.save_model('/workspace/timelms/scripts/saved_model')
+
+pipeline = pipeline('sentiment-analysis', model=model, tokenizer=tokenizer)
+pipeline.save_pretrained('/workspace/timelms/scripts/saved_model')
 # res = trainer.evaluate(tokenized_datasets['test'])
 # print(res)
