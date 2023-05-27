@@ -1,3 +1,8 @@
+"""
+Original Copyright 2022 Loureiro  Daniel, Camacho-collados Jose, et al. Released without any restrictions with scoring code under Apache License 2.0.
+Modifications Copyright 2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+"""
+
 import numpy as np
 import evaluate
 
