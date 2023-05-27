@@ -267,7 +267,7 @@ def save_model(model, model_dir):
         
         s3 = boto3.resource(service_name = 's3')
         logger.info("S3 bucket: - {}".format(args.s3bucket))
-        s3.meta.client.upload_file(Filename = updated_path, Bucket = args.s3bucket, Key = 'model-kserve.pth')
+        s3.meta.client.upload_file(Filename = updated_path, Bucket = args.s3bucket, Key = 'model_kserve.pth')
         
     else:
         path = os.path.join(model_dir, "model.pth")
