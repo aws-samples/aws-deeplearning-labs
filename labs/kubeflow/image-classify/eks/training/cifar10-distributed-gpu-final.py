@@ -3,6 +3,8 @@ import json
 import logging
 import os
 import sys
+import boto3
+
 
 import torch
 import torch.distributed as dist
@@ -53,8 +55,6 @@ def _get_transforms():
 # Define data loader for training dataset
 def _get_train_data_loader(batch_size, training_dir, is_distributed):
     logger.info("Get train data loader")
-    
-
    
     train_set = torchvision.datasets.CIFAR10(root=training_dir, 
                                              train=True, 
@@ -218,6 +218,34 @@ def test(model, test_loader, device):
             test_loss, correct / len(test_loader.dataset)
         )
     )
+    
+# We have saved the model using nn.DataParallel, which stores the model in module, and we wont be able to load it without DataParallel. So below we create a new ordered dict without the module prefix, and load it back.
+def remove_ddp_model(model_dir, new_model_name):
+    from collections import OrderedDict
+    
+    path = os.path.join(model_dir, "model.pth")
+    
+    logger.info("Path of current model: - {}".format(path))
+    
+    model = Net()
+    # Original saved file with DataParallel
+    checkpoint = torch.load(path,map_location=lambda storage, loc: storage)
+
+    new_state_dict = OrderedDict()
+    for k, v in checkpoint.items():
+        name = k[7:] # remove `module.`
+        new_state_dict[name] = v
+
+    # Load parameters
+    model.load_state_dict(new_state_dict)
+    
+    path = os.path.join(model_dir, new_model_name)
+    
+    logger.info("Path of new model after removing ddp module: - {}".format(path))
+
+    torch.save(new_state_dict, path)
+    
+    return path
 
 def save_model(model, model_dir):
     logger.info("Saving the model.")
@@ -226,13 +254,26 @@ def save_model(model, model_dir):
     
     if "SM_CHANNEL_TRAIN" not in os.environ:
         model_dir="/"+args.efs_mount_path
+        path = os.path.join(model_dir, "model.pth")
+
         #os.makedirs(model_dir)
         logger.info("The new directory is: - {}".format(model_dir))
+        
+        torch.save(model.cpu().state_dict(), path)
+        
+        updated_path=remove_ddp_model(model_dir, "model_kserve.pth")
+        
+        logger.info("Updated Path of new model after removing ddp module: - {}".format(path))
+        
+        s3 = boto3.resource(service_name = 's3')
+        logger.info("S3 bucket: - {}".format(args.s3bucket))
+        s3.meta.client.upload_file(Filename = updated_path, Bucket = args.s3bucket, Key = 'model_kserve.pth')
+        
+    else:
+        path = os.path.join(model_dir, "model.pth")
+        logger.info("model save path - {}".format(path))
 
-    path = os.path.join(model_dir, "model.pth")
-    logger.info("model save path - {}".format(path))
-
-    torch.save(model.cpu().state_dict(), path)
+        torch.save(model.cpu().state_dict(), path)
 
 if __name__ == "__main__":
     logger.info("Starting the script.")
@@ -263,6 +304,9 @@ if __name__ == "__main__":
     
     parser.add_argument("--efs-dir-path",type=str,default="cifar10-dataset",
                         help="efs mount path")
+    
+    parser.add_argument("--s3bucket",type=str,default="s3bucketname",
+                        help="s3 bucket name")
 
     # SageMaker environment    
     parser.add_argument("--hosts", type=list, default=json.loads(os.environ.get("SM_HOSTS","{}")))

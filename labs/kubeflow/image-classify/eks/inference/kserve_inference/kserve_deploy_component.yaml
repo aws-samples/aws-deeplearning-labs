@@ -1,0 +1,15 @@
+name: Serve a model with KServe Unix
+description: Serve Models using KServe Unix
+inputs:
+  - {name: bucket, type: String}
+  - {name: model_input, type: String}
+  - {name: model_archive_name, type: String}
+implementation:
+  container:
+    image: 458473390725.dkr.ecr.us-west-2.amazonaws.com/kfp:latest
+    command: ["/bin/sh","/app/submit.sh"]
+    args: 
+      - {inputValue: bucket}
+      - {inputValue: model_input}
+      - {inputValue: model_archive_name}
+   
